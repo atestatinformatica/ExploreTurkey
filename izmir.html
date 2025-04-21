@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Explore Izmir - ExploreTurkey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<!-- header-top start -->
+<header id="header-top" class="header-top">
+    <ul>
+        <li>
+            <div class="header-top-left">
+                <ul>
+                    <li class="select-opt">
+                        <select name="language" id="language">
+                            <option value="default">EN</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <select name="currency" id="currency">
+                            <option value="usd">USD</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!-- Navigation Start -->
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+                </div>
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="#explore">explore</a></li>
+                        <li class="scroll"><a href="#reviews">review</a></li>
+                        <li class="scroll"><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<!-- Welcome Hero -->
+<section id="home" class="welcome-hero" style="background: url('assets/images/turkey/Izmir.jpg') no-repeat center center/cover;">
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <h2>Explore Izmir</h2>
+            <p>Experience the vibrant coastal life of Turkey's Aegean gem.</p>
+        </div>
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3>location</h3>
+                    <form action="izmir.html">
+                        <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
+                    </form>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" onclick="searchCity(event)">search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore Izmir -->
+<section id="explore" class="explore">
+    <div class="container">
+        <div class="section-header">
+            <h2>Explore Izmir</h2>
+        </div>
+        <div class="explore-content">
+            <div class="row">
+
+                <!-- Clock Tower -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-explore-item">
+                        <div class="single-explore-img">
+                            <img src="assets/images/explore/clock-tower.jpg" alt="Clock Tower">
+                            <div class="single-explore-img-info">
+                                <button>Landmark</button>
+                                <div class="single-explore-image-icon-box">
+                                    <ul>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Clock Tower', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Clock Tower, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-explore-txt bg-theme-1">
+                            <h2><a href="#">Clock Tower</a></h2>
+                            <p class="explore-rating-price">
+                                <span class="explore-rating">4.8</span>
+                                <a href="#">40 ratings</a>
+                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                            </p>
+                            <p>The most iconic symbol of Izmir, located in Konak Square.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kordon Seaside -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-explore-item">
+                        <div class="single-explore-img">
+                            <img src="assets/images/explore/kordon.jpg" alt="Kordon Seaside">
+                            <div class="single-explore-img-info">
+                                <button>Seaside</button>
+                                <div class="single-explore-image-icon-box">
+                                    <ul>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kordon Seaside', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kordon, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-explore-txt bg-theme-2">
+                            <h2><a href="#">Kordon Seaside</a></h2>
+                            <p class="explore-rating-price">
+                                <span class="explore-rating">4.7</span>
+                                <a href="#">35 ratings</a>
+                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                            </p>
+                            <p>A scenic promenade along Izmir's coastline, perfect for walks and sunsets.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Restul sectiunilor ca in antalya.html -->
+<!-- Footer, modale, scripturi etc. pot fi copiate identic din celelalte pagini -->
+
+</body>
+</html>

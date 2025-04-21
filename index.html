@@ -126,13 +126,15 @@
 
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			               <ul class="nav navbar-nav navbar-right" id="navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" scroll active"><a href="#home">home</a></li>
 			                    <li class="scroll"><a href="#works">how it works</a></li>
 			                    <li class="scroll"><a href="#explore">explore</a></li>
 			                    <li class="scroll"><a href="#reviews">review</a></li>
 			                    <li class="scroll"><a href="#blog">blog</a></li>
 			                    <li class="scroll"><a href="#contact">contact</a></li>
+								
+
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -329,15 +331,15 @@
                                 <button>best rated</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                       <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Hagia Sophia')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hagia Sophia' , this.querySelector('i'))"><i class="fa fa-heart-o"></i></a>
+</div></li>
+                                        <li><div class="single-explore-image-icon">
+                                        <a href="#" onclick="event.preventDefault(); openMap('Hagia Sophia, Istanbul')">
+                                        <i class="fa fa-map-marker"></i>
+                                        </a>
+                                        </div></li>
 
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -369,15 +371,14 @@
                                 <button>featured</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                       <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Pamukkale')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
-
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Pamukkale', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a>
+</div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap('Pamukkale, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -409,15 +410,14 @@
                                 <button>top visited</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                       <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Mevlana Museum')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
-
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Mevlana Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a>
+</div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap('Mevlana Museum, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -452,15 +452,13 @@
                                 <button>ancient</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                       <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Ephesus')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
-
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Ephesus', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap('Ephesus, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -492,15 +490,13 @@
                                 <button>Religious</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                      <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Sumela Monastery')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
-
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Sumela Monastery', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap(' Sumela Monastery, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div>
+											</li>
                                     </ul>
                                 </div>
                             </div>
@@ -532,15 +528,12 @@
                                 <button>historic</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                       <li>
-  <div class="single-explore-image-icon">
-    <a href="#" onclick="toggleLike('Topkapi Palace')">
-      <i class="fa fa-heart-o"></i>
-    </a>
-  </div>
-</li>
-
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Topkapi Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap('Topkapi Palace, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -900,9 +893,10 @@
 						<div class="subscription-input-group">
 							<form action="#">
 								<input type="email" class="subscription-input-form" placeholder="Enter your email here">
-								<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-									create account
-								</button>
+								<button class="appsLand-btn subscribe-btn" onclick="submitEmailLogin(event)">
+    create account
+</button>
+
 							</form>
 						</div>
 					</div>	
@@ -964,7 +958,22 @@
 			
         </footer><!--/.footer-->
 		<!--footer end-->
-		
+		<!-- Message box -->
+     <div id="message-box" class="message-box hidden"></div>
+<!-- Slide simplu pentru My Favorites -->
+<div id="favorites-panel" class="favorites-slide">
+  <span class="close-favorites" onclick="toggleFavoritesPanel()">x</span>
+  <h3 class="favorites-title">My Favorites</h3>
+  <p style="color: white;">Acesta este un panou demonstrativ</p>
+</div>
+
+<!-- Modal pentru hartă -->
+<div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+    <span class="close" onclick="closeMap()" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+    <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
   <script>
 let lastScrollTop = 0;
@@ -1054,73 +1063,154 @@ function closePopupText() {
 }
 </script>
 
-	 <script>
+	<script>
 let isLoggedIn = false;
 let favorites = [];
-
-function login() {
-    isLoggedIn = true;
-    alert("You are now logged in!");
-}
-	 </script>
-<script>
-let isLoggedIn = false;
-let favorites = [];
+let userProfileImage = "assets/images/users/user-placeholder.jpg"; // default profile image
 
 function login() {
     isLoggedIn = true;
     updateNavbar();
-    alert("You are now logged in!");
-}
+    showMessage("You are now logged in!");
 
-function redirectToCreateAccount() {
-    const confirmCreate = confirm("You must create an account to like places. Do you want to sign up?");
-    if (confirmCreate) {
-        login(); // Simulează crearea contului și logare
+    const scrollBack = localStorage.getItem("preLoginScroll");
+    if (scrollBack) {
+        setTimeout(() => {
+            window.scrollTo({ top: parseInt(scrollBack), behavior: 'smooth' });
+            localStorage.removeItem("preLoginScroll");
+        }, 300); // mic delay după mesaj
     }
 }
 
-function toggleLike(name) {
+
+function redirectToCreateAccount() {
+    // Salvăm poziția Y
+    localStorage.setItem("preLoginScroll", window.scrollY);
+    showMessage("Please log in with your email to like places.");
+    document.querySelector("#contact").scrollIntoView({ behavior: 'smooth' });
+}
+
+
+function toggleLike(name, iconElement) {
     if (!isLoggedIn) {
         redirectToCreateAccount();
         return;
     }
 
-    if (!favorites.includes(name)) {
+    const index = favorites.indexOf(name);
+
+    if (index === -1) {
         favorites.push(name);
-        alert(`${name} added to favorites!`);
+        showMessage(`${name} added to favorites!`);
+        iconElement.classList.remove("fa-heart-o");
+        iconElement.classList.add("fa-heart");
+        iconElement.style.color = "red";
     } else {
-        alert(`${name} is already in your favorites.`);
+        favorites.splice(index, 1);
+        showMessage(`${name} removed from favorites.`);
+        iconElement.classList.remove("fa-heart");
+        iconElement.classList.add("fa-heart-o");
+        iconElement.style.color = "";
     }
 }
 
-function showFavorites() {
+function openFavorites() {
     if (!isLoggedIn) {
-        alert("Please log in to view your favorites.");
+        showMessage("Please log in to view your favorites.");
         return;
     }
 
+    const panel = document.getElementById("favorites-slide");
+    panel.classList.add("show");
+
+    const container = document.getElementById("favorites-list");
+    container.innerHTML = ""; // clear list
+
+    favorites.forEach(name => {
+        container.innerHTML += `
+            <div class="favorite-card">
+                <img src="assets/images/explore/${name.toLowerCase().replaceAll(' ', '-')}.jpg" alt="${name}">
+                <div class="content">
+                    <h4>${name}</h4>
+                    <small>Rating: 5.0 ★</small>
+                    <p>Description for ${name}...</p>
+                </div>
+            </div>
+        `;
+    });
+
     if (favorites.length === 0) {
-        alert("You haven't liked any places yet.");
-    } else {
-        alert("Your favorites:\n- " + favorites.join("\n- "));
+        container.innerHTML = "<p>No favorites yet.</p>";
     }
 }
 
-function updateNavbar() {
-    const nav = document.getElementById("navbar-right");
+function closeFavorites() {
+    document.getElementById("favorites-slide").classList.remove("show");
+}
 
-    nav.innerHTML = `
-        <li><a href="#" onclick="showFavorites()">My Favorites</a></li>
+
+function updateNavbar() {
+    const nav = document.querySelector(".nav.navbar-nav.navbar-right");
+    nav.innerHTML += `
+       <li class="scroll"><a href="#" onclick="toggleFavoritesPanel()">My Favorites</a></li>
+
         <li>
             <a href="#">
-                <img src="assets/images/users/user-placeholder.jpg" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
+                <img src="${userProfileImage}" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
             </a>
         </li>
     `;
 }
-</script>
 
+function submitEmailLogin(event) {
+    event.preventDefault();
+    const email = document.querySelector(".subscription-input-form").value.trim();
+    if (email === "") {
+        showMessage("Please enter a valid email.");
+        return;
+    }
+	
+    if (!isLoggedIn) {
+        login(); // activează login-ul
+    } else {
+        showMessage("You are already logged in.");
+    }
+   /* login(); // simulăm logarea*/
+}
+
+
+</script>
+<script>
+function showMessage(text) {
+    const box = document.getElementById("message-box");
+    box.textContent = text;
+    box.classList.remove("hidden");
+    box.classList.add("show");
+
+    setTimeout(() => {
+        box.classList.remove("show");
+        box.classList.add("hidden");
+    }, 2500); // 2.5 secunde
+}
+</script>
+<script>
+  function toggleFavoritesPanel() {
+    const panel = document.getElementById("favorites-panel");
+    panel.classList.toggle("open");
+  }
+</script>
+<script>
+function openMap(location) {
+    const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+    document.getElementById('mapIframe').src = mapUrl;
+    document.getElementById('mapModal').style.display = 'block';
+}
+
+function closeMap() {
+    document.getElementById('mapModal').style.display = 'none';
+    document.getElementById('mapIframe').src = ''; // reset la închidere
+}
+</script>
     </body>
 	
 </html>

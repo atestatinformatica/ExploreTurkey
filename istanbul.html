@@ -404,7 +404,8 @@
 </div>
 
 
-				<!-- Include all js compiled plugins (below), or include individual files as needed -->
+			
+ <!-- Include all js compiled plugins (below), or include individual files as needed -->
   <script>
 let lastScrollTop = 0;
 const header = document.querySelector('.header-area');
@@ -423,35 +424,17 @@ window.addEventListener('scroll', function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 </script>
+        <!-- JAVASCRIPTS -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/scrollspy.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
 
-
-
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-
-        <!--feather.min.js-->
-        <script  src="assets/js/feather.min.js"></script>
-
-        <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-
-        <!--slick.min.js-->
-        <script src="assets/js/slick.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		     
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-		<script>
+   
+	  		<script>
     /*const citiesInTurkey = [
         "istanbul", "ankara", "izmir", "antalya", "bursa",
         "adana", "gaziantep", "konya", "trabzon", "kayseri",
@@ -486,6 +469,28 @@ window.addEventListener('scroll', function () {
     }
 }
 
+
+</script>
+<!-- Pop-up pentru text (How It Works) -->
+<div id="popuptext" class="popuptext" style="display: none;">
+    <span class="close" onclick="closePopupText()">&times;</span>
+    <div class="popuptext-content">
+        <p id="popuptext-content-text"></p>
+    </div>
+</div>
+
+
+
+ <script>
+function openPopupText(text) {
+    document.getElementById("popuptext-content-text").innerText = text;
+    document.getElementById("popuptext").style.display = "flex";
+}
+
+function closePopupText() {
+    document.getElementById("popuptext").style.display = "none";
+}
+</script>
 
 	<script>
 let isLoggedIn = false;
@@ -635,6 +640,11 @@ function closeMap() {
     document.getElementById('mapIframe').src = ''; // reset la închidere
 }
 </script>
+
+
+
+
+
     </body>
 	
 </html>

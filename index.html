@@ -86,21 +86,7 @@
 						</ul>
 					</div>
 				</li>
-				<li class="head-responsive-right pull-right">
-					<div class="header-top-right">
-						<ul>
-							<li class="header-top-contact">
-								+1 222 777 6565
-							</li>
-							<li class="header-top-contact">
-								<a href="#">sign in</a>
-							</li>
-							<li class="header-top-contact">
-								<a href="#">register</a>
-							</li>
-						</ul>
-					</div>
-				</li>
+				
 			</ul>
 					
 		</header><!--/.header-top-->
@@ -160,8 +146,9 @@
 						<div class="single-welcome-hero-form">
 					
 							<h3>location</h3>
+							<form onsubmit="searchCity(event)">
 							<form action="index.html">
-								<input type="text" placeholder="Ex: Istanbul, Antalya, Izmir..." />
+								<input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
 							</form>
 							<div class="welcome-hero-form-icon">
 								<!--<i class="flaticon-gps-fixed-indicator"></i>-->
@@ -169,9 +156,8 @@
 						</div>
 					</div>
 					<div class="welcome-hero-serch">
-						<button class="welcome-hero-btn" onclick="window.location.href='#'">
-							 search  <i data-feather="search"></i> 
-						</button>
+					<button class="welcome-hero-btn" onclick="searchCity(event)">search <i data-feather="search"></i>
+                    </button>
 					</div>
 				</div>
 			</div>
@@ -1022,25 +1008,41 @@ window.addEventListener('scroll', function () {
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
 		<script>
-    const citiesInTurkey = [
+    /*const citiesInTurkey = [
         "istanbul", "ankara", "izmir", "antalya", "bursa",
         "adana", "gaziantep", "konya", "trabzon", "kayseri",
         "mardin", "sanliurfa", "cappadocia", "pamukkale"
-    ];
+    ];*/
 
-    function searchCity(event) {
-        event.preventDefault();
-        const input = document.getElementById("location-input").value.trim().toLowerCase();
+ function searchCity(event) {
+    event.preventDefault();
+    const input = document.getElementById("location-input").value.trim().toLowerCase();
 
-        if (citiesInTurkey.includes(input)) {
-            alert(`Searching for ${input.charAt(0).toUpperCase() + input.slice(1)}...`);
-            // redirect or update content here
-        } else {
-            alert("Orașul nu este în lista noastră din Turcia. Încearcă altul!");
-        }
+    const citiesMap = {
+        "istanbul": "istanbul.html",
+        "ankara": "ankara.html",
+        "izmir": "izmir.html",
+        "antalya": "antalya.html",
+        "bursa": "bursa.html",
+        "adana": "adana.html",
+        "gaziantep": "gaziantep.html",
+        "konya": "konya.html",
+        "trabzon": "trabzon.html",
+        "kayseri": "kayseri.html",
+        "mardin": "mardin.html",
+        "sanliurfa": "sanliurfa.html",
+        "cappadocia": "cappadocia.html",
+        "pamukkale": "pamukkale.html"
+    };
 
-        return false;
+    if (citiesMap[input]) {
+        window.location.href = citiesMap[input];
+    } else {
+        alert("Orașul nu este în lista noastră din Turcia. Încearcă altul!");
     }
+}
+
+
 </script>
 <!-- Pop-up pentru text (How It Works) -->
 <div id="popuptext" class="popuptext" style="display: none;">

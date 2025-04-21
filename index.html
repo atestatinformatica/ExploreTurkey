@@ -126,7 +126,7 @@
 
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			               <ul class="nav navbar-nav navbar-right" id="navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" scroll active"><a href="#home">home</a></li>
 			                    <li class="scroll"><a href="#works">how it works</a></li>
 			                    <li class="scroll"><a href="#explore">explore</a></li>
@@ -329,7 +329,14 @@
                                 <button>best rated</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                       <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Hagia Sophia')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -362,7 +369,14 @@
                                 <button>featured</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                       <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Pamukkale')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -395,7 +409,14 @@
                                 <button>top visited</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                       <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Mevlana Museum')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -431,7 +452,14 @@
                                 <button>ancient</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                       <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Ephesus')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -464,7 +492,14 @@
                                 <button>Religious</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                      <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Sumela Monastery')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -497,7 +532,14 @@
                                 <button>historic</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li><div class="single-explore-image-icon"><i class="fa fa-heart-o"></i></div></li>
+                                       <li>
+  <div class="single-explore-image-icon">
+    <a href="#" onclick="toggleLike('Topkapi Palace')">
+      <i class="fa fa-heart-o"></i>
+    </a>
+  </div>
+</li>
+
                                         <li><div class="single-explore-image-icon"><i class="fa fa-map-marker"></i></div></li>
                                     </ul>
                                 </div>
@@ -1021,6 +1063,63 @@ function login() {
     alert("You are now logged in!");
 }
 	 </script>
+<script>
+let isLoggedIn = false;
+let favorites = [];
+
+function login() {
+    isLoggedIn = true;
+    updateNavbar();
+    alert("You are now logged in!");
+}
+
+function redirectToCreateAccount() {
+    const confirmCreate = confirm("You must create an account to like places. Do you want to sign up?");
+    if (confirmCreate) {
+        login(); // Simulează crearea contului și logare
+    }
+}
+
+function toggleLike(name) {
+    if (!isLoggedIn) {
+        redirectToCreateAccount();
+        return;
+    }
+
+    if (!favorites.includes(name)) {
+        favorites.push(name);
+        alert(`${name} added to favorites!`);
+    } else {
+        alert(`${name} is already in your favorites.`);
+    }
+}
+
+function showFavorites() {
+    if (!isLoggedIn) {
+        alert("Please log in to view your favorites.");
+        return;
+    }
+
+    if (favorites.length === 0) {
+        alert("You haven't liked any places yet.");
+    } else {
+        alert("Your favorites:\n- " + favorites.join("\n- "));
+    }
+}
+
+function updateNavbar() {
+    const nav = document.getElementById("navbar-right");
+
+    nav.innerHTML = `
+        <li><a href="#" onclick="showFavorites()">My Favorites</a></li>
+        <li>
+            <a href="#">
+                <img src="assets/images/users/user-placeholder.jpg" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
+            </a>
+        </li>
+    `;
+}
+</script>
 
     </body>
 	

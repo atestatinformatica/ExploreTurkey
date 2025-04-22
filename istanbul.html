@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Explore Istanbul - ExploreTurkey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -12,105 +12,79 @@
 </head>
 
 <body>
-<!--header-top start -->
-		<header id="header-top" class="header-top">
-			<ul>
-				<li>
-					<div class="header-top-left">
-						<ul>
-							<li class="select-opt">
-								<select name="language" id="language">
-									<option value="default">EN</option>
-									<option value="Bangla">BN</option>
-									<option value="Arabic">AB</option>
-								</select>
-							</li>
-							<li class="select-opt">
-								<select name="currency" id="currency">
-									<option value="usd">USD</option>
-									<option value="euro">Euro</option>
-									<option value="bdt">BDT</option>
-								</select>
-							</li>
-							<li class="select-opt">
-								<a href="#"><span class="lnr lnr-magnifier"></span></a>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-					
-		</header><!--/.header-top-->
-		<!--header-top end -->
+<!-- header-top start -->
+<header id="header-top" class="header-top">
+    <ul>
+        <li>
+            <div class="header-top-left">
+                <ul>
+                    <li class="select-opt">
+                        <select name="language" id="language">
+                            <option value="default">EN</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <select name="currency" id="currency">
+                            <option value="usd">USD</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>
 
-		<!-- top-area Start -->
-		<section class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-			        <div class="container">
-
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
-
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
-
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                    <li class=" scroll active"><a href="#home">home</a></li>			         
-			                    <li class="scroll"><a href="#explore">explore</a></li>
-			                    <li class="scroll"><a href="#reviews">review</a></li>
-			                    <li class="scroll"><a href="#blog">blog</a></li>
-			                    <li class="scroll"><a href="#contact">contact</a></li>
-								
-
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
-		    <div class="clearfix"></div>
-
-		</section><!-- /.top-area-->
-		<!-- top-area End -->
-
-		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero">
-			<div class="container">
-				<div class="welcome-hero-txt">
-					 <h2>Explore Istanbul</h2>
-            <p>Discover the magical blend of Europe and Asia, from Hagia Sophia to the Bosphorus shores.</p>
-				</div>
-				<div class="welcome-hero-serch-box">
-					<div class="welcome-hero-form">
-						<div class="single-welcome-hero-form">
-					
-							<h3>location</h3>
-							<form action="index.html">
-								<input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
-							</form>
-							<div class="welcome-hero-form-icon">
-								<!--<i class="flaticon-gps-fixed-indicator"></i>-->
-							</div>
-						</div>
-					</div>
-					<div class="welcome-hero-serch">
-					<button class="welcome-hero-btn" onclick="searchCity(event)">
-                    search <i data-feather="search"></i>
+<!-- Navigation Start -->
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
                     </button>
-					</div>
-				</div>
-			</div>
+                    <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+                </div>
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="#explore">explore</a></li>
+                        <li class="scroll"><a href="#reviews">review</a></li>
+						<li class="scroll"><a href="#blog">blog</a></li>
+                        <li class="scroll"><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
 
-		</section><!--/.welcome-hero-->
+<!-- Welcome Hero -->
+<section id="home" class="welcome-hero" style="background: url('assets/images/turkey/Istanbul.jpg') no-repeat center center/cover;">
+    <div class="container">
+        <div class="welcome-hero-txt">
+             <h2>Explore Istanbul</h2>
+            <p>Discover the magical blend of Europe and Asia, from Hagia Sophia to the Bosphorus shores.</p>
+        </div>
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3>location</h3>
+					<form onsubmit="searchCity(event)">
+                    <form action="antalya.html">
+                        <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
+                    </form>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" onclick="searchCity(event)">search</button>
+            </div>
+        </div>
+    </div>
+</section>
 		<!--welcome-hero end -->
 <!-- Explore Istanbul -->
 <section id="explore" class="explore">
@@ -161,49 +135,193 @@
                     </div>
                 </div>
 
-                <!-- Topkapi Palace -->
+                <!-- 2. Topkapi Palace -->
                 <div class="col-md-4 col-sm-6">
                     <div class="single-explore-item">
                         <div class="single-explore-img">
                             <img src="assets/images/explore/topkapi.jpg" alt="Topkapi Palace">
                             <div class="single-explore-img-info">
-                                <button>Historic</button>
+                                <button>historic</button>
                                 <div class="single-explore-image-icon-box">
                                     <ul>
-                                        <li>
-                                            <div class="single-explore-image-icon">
-                                                <a href="#" onclick="event.preventDefault(); toggleLike('Topkapi Palace', this.querySelector('i'))">
-                                                    <i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="single-explore-image-icon">
-                                                <a href="#" onclick="event.preventDefault(); openMap('Topkapi Palace, Istanbul')">
-                                                    <i class="fa fa-map-marker"></i>
-                                                </a>
-                                            </div>
-                                        </li>
+                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Topkapi Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                                        <li><div class="single-explore-image-icon">
+                                            <a href="#" onclick="event.preventDefault(); openMap('Topkapi Palace, Turkey')">
+                                            <i class="fa fa-map-marker"></i>
+                                            </a>
+                                            </div></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-explore-txt bg-theme-2">
+                        <div class="single-explore-txt bg-theme-4">
                             <h2><a href="#">Topkapi Palace</a></h2>
                             <p class="explore-rating-price">
-                                <span class="explore-rating">4.7</span>
+                                <span class="explore-rating">4.6</span>
                                 <a href="#">19 ratings</a>
                                 <span class="explore-price-box">price: <span class="explore-price">200 TL</span></span>
+                                <a href="#">Palace</a>
                             </p>
-                            <p>Residence of Ottoman Sultans, now a major museum.</p>
+                            <div class="explore-person">
+                                <div class="row">
+                                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                                    <div class="col-sm-10"><p>Former residence of the Ottoman sultans — now an open-air museum.</p></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+				
+				<!-- 3. Blue Mosque -->
+				<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/blue-mosque.jpg" alt="Blue Mosque">
+            <div class="single-explore-img-info">
+                <button>historic</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Blue Mosque', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Blue Mosque, Istanbul')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Blue Mosque</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.8</span>
+                <a href="#">30 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                <a href="#">Mosque</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>One of the most beautiful mosques in the world, known for its blue tiles.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 4. Galata Tower -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/galata-tower.jpg" alt="Galata Tower">
+            <div class="single-explore-img-info">
+                <button>viewpoint</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Galata Tower', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Galata Tower, Istanbul')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Galata Tower</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.6</span>
+                <a href="#">40 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">140 TL</span></span>
+                <a href="#">Tower</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Medieval stone tower offering panoramic views over Istanbul.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5.Dolmabahçe Palace-->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/dolmabahce-palace.jpg" alt="Dolmabahce Palace">
+            <div class="single-explore-img-info">
+                <button>luxury</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon">
+                            <a href="#" onclick="event.preventDefault(); toggleLike('Dolmabahce Palace', this.querySelector('i'))">
+                                <i class="fa fa-heart-o"></i>
+                            </a>
+                        </div></li>
+                        <li><div class="single-explore-image-icon">
+                            <a href="#" onclick="event.preventDefault(); openMap('Dolmabahce Palace, Istanbul')">
+                                <i class="fa fa-map-marker"></i>
+                            </a>
+                        </div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-1">
+            <h2><a href="#">Dolmabahçe Palace</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.8</span>
+                <a href="#">50 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">300 TL</span></span>
+                <a href="#">Palace</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div>
+                    </div>
+                    <div class="col-sm-10">
+                        <p>The grand palace on the Bosphorus, showcasing the splendor of the Ottoman Empire's last sultans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 6. Basilica Cistern -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/basilica-cistern.jpg" alt="Basilica Cistern">
+            <div class="single-explore-img-info">
+                <button>underground</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Basilica Cistern', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Basilica Cistern, Istanbul')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Basilica Cistern</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.7</span>
+                <a href="#">55 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">100 TL</span></span>
+                <a href="#">Cistern</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Ancient underground water reservoir featuring iconic Medusa heads and mysterious atmosphere.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             </div>
         </div>
     </div>
 </section>
+<!--explore end -->
 
 <!-- Modal pentru hartă -->
 <div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">

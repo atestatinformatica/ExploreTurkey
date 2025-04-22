@@ -72,6 +72,7 @@
             <div class="welcome-hero-form">
                 <div class="single-welcome-hero-form">
                     <h3>location</h3>
+					<form onsubmit="searchCity(event)">
                     <form action="pamukkale.html">
                         <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
                     </form>
@@ -92,100 +93,204 @@
         </div>
         <div class="explore-content">
             <div class="row">
-                 <!-- 2. Pamukkale -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/pamukkale.jpg" alt="Pamukkale">
-                            <div class="single-explore-img-info">
-                                <button>featured</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Pamukkale', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a>
-</div></li>
-                                        <li><div class="single-explore-image-icon">
-                                            <a href="#" onclick="event.preventDefault(); openMap('Pamukkale, Turkey')">
-                                            <i class="fa fa-map-marker"></i>
-                                            </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-2">
-                            <h2><a href="#">Pamukkale</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.8</span>
-                                <a href="#">18 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">150 TL</span></span>
-                                <a href="#">Natural Destination</a>
-                            </p>
-                            <div class="explore-person">
-                                <div class="row">
-                                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
-                                    <div class="col-sm-10"><p>White terraces and thermal waters — a unique natural wonder of the world.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Travertine Terraces -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/travertines.jpg" alt="Travertine Terraces">
-                            <div class="single-explore-img-info">
-                                <button>Nature</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Travertine Terraces', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Pamukkale Travertines')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-1">
-                            <h2><a href="#">Travertine Terraces</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.9</span>
-                                <a href="#">70 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
-                            </p>
-                            <p>The famous white limestone terraces filled with warm mineral water.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hierapolis Ancient City -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/hierapolis.jpg" alt="Hierapolis">
-                            <div class="single-explore-img-info">
-                                <button>Historic</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hierapolis', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Hierapolis Ancient City')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-2">
-                            <h2><a href="#">Hierapolis Ancient City</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.8</span>
-                                <a href="#">60 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">50 TL</span></span>
-                            </p>
-                            <p>Explore the ancient Roman city ruins located above the Pamukkale terraces.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<!-- 1. Travertine Terraces -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/travertines.jpg" alt="Travertine Terraces">
+      <div class="single-explore-img-info">
+        <button>nature</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Travertine Terraces', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Pamukkale Travertines')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
         </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Travertine Terraces</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">5.0</span>
+        <a href="#">300 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">200 TL</span></span>
+        <a href="#">Natural Wonder</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Famous white terraces of mineral-rich thermal waters cascading down hillsides.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Hierapolis Ancient City -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/hierapolis.jpg" alt="Hierapolis Ancient City">
+      <div class="single-explore-img-info">
+        <button>historic</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hierapolis', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Hierapolis, Pamukkale')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Hierapolis Ancient City</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.9</span>
+        <a href="#">220 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Included</span></span>
+        <a href="#">Ruins</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Greco-Roman city built atop the hot springs, UNESCO World Heritage site.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Cleopatra's Pool -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/cleopatra-pool.jpg" alt="Cleopatra's Pool">
+      <div class="single-explore-img-info">
+        <button>relaxation</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Cleopatra\'s Pool', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Cleopatra Pool, Pamukkale')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Cleopatra's Pool</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">180 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">130 TL</span></span>
+        <a href="#">Thermal Pool</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Swim among ancient Roman columns in naturally heated waters said to have healing powers.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Pamukkale Antique Pool -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/antique-pool.jpg" alt="Pamukkale Antique Pool">
+      <div class="single-explore-img-info">
+        <button>thermal</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Antique Pool', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Antique Pool, Pamukkale')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Pamukkale Antique Pool</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.8</span>
+        <a href="#">150 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">130 TL</span></span>
+        <a href="#">Thermal Pool</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Another famous thermal pool perfect for bathing among ancient ruins.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Pamukkale Natural Park -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/natural-park.jpg" alt="Pamukkale Natural Park">
+      <div class="single-explore-img-info">
+        <button>park</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Pamukkale Natural Park', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Pamukkale Natural Park')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Pamukkale Natural Park</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.5</span>
+        <a href="#">90 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Park</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>A relaxing green park with ponds, cafés, and a stunning view of the terraces.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Laodicea Ancient City -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/laodicea.jpg" alt="Laodicea Ancient City">
+      <div class="single-explore-img-info">
+        <button>archaeology</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Laodicea', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Laodicea, Denizli')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Laodicea Ancient City</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">100 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">30 TL</span></span>
+        <a href="#">Ruins</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Important ancient city with impressive Roman streets, temples, and theatres.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                 
     </div>
 </section>
 

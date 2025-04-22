@@ -355,7 +355,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 
 
 /*-------------------------------------
-        5. List-topuics
+        5. List-topics
 --------------------------------------*/
 .list-topics-content {
     position: relative;
@@ -394,7 +394,21 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     background:#ff545a;
     box-shadow: 0 5px 10px rgba(71,71,71,.4);
 }
+/* pt list topics*/
+.list-topics-content ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between; /* întinse pe toată lățimea */
+}
 
+.list-topics-content ul li {
+  flex: 1 1 0;
+  max-width: 20%; /* cam 5 itemi * 20% fiecare */
+  text-align: center;
+}
 /*-------------------------------------
         6. Works 
 --------------------------------------*/

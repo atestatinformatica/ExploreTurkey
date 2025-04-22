@@ -73,6 +73,7 @@
             <div class="welcome-hero-form">
                 <div class="single-welcome-hero-form">
                     <h3>location</h3>
+					<form onsubmit="searchCity(event)">
                     <form action="antalya.html">
                         <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
                     </form>
@@ -94,63 +95,205 @@
         <div class="explore-content">
             <div class="row">
 
-                <!-- Kaleiçi Old Town -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/kaleici.jpg" alt="Kaleici">
-                            <div class="single-explore-img-info">
-                                <button>Historic</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kaleici', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kaleici, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-1">
-                            <h2><a href="#">Kaleiçi Old Town</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.8</span>
-                                <a href="#">30 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
-                            </p>
-                            <p>Cobblestone streets and historic houses in the heart of Antalya.</p>
-                        </div>
-                    </div>
+               <!-- 1. Old Town (Kaleiçi) -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/kaleici.jpg" alt="Old Town Kaleici">
+            <div class="single-explore-img-info">
+                <button>historic</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kaleici', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kaleici, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
                 </div>
-
-                <!-- Düden Waterfalls -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/duden.jpg" alt="Duden Waterfalls">
-                            <div class="single-explore-img-info">
-                                <button>Nature</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Duden Waterfalls', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Duden Waterfalls, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-2">
-                            <h2><a href="#">Düdün Waterfalls</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.7</span>
-                                <a href="#">20 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
-                            </p>
-                            <p>One of Antalya's most beautiful natural attractions.</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-1">
+            <h2><a href="#">Kaleiçi</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.7</span>
+                <a href="#">60 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                <a href="#">Old Town</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Charming old town with narrow streets, historic houses, and lively bazaars.</p></div>
                 </div>
-
             </div>
         </div>
     </div>
+</div>
+
+<!-- 2. Düden Waterfalls -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/duden.jpg" alt="Duden Waterfalls">
+            <div class="single-explore-img-info">
+                <button>nature</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Duden Waterfalls', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Duden Waterfalls, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Düden Waterfalls</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.8</span>
+                <a href="#">45 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">20 TL</span></span>
+                <a href="#">Waterfall</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Spectacular waterfalls plunging into the Mediterranean Sea near Antalya.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Antalya Museum -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/antalya-museum.jpg" alt="Antalya Museum">
+            <div class="single-explore-img-info">
+                <button>museum</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Antalya Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Antalya Museum')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-1">
+            <h2><a href="#">Antalya Museum</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.7</span>
+                <a href="#">50 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">100 TL</span></span>
+                <a href="#">Museum</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>One of Turkey's largest museums, housing artifacts from ancient Pamphylia and beyond.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4. Konyaaltı Beach -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/konyaalti-beach.jpg" alt="Konyaalti Beach">
+            <div class="single-explore-img-info">
+                <button>beach</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Konyaalti Beach', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Konyaalti Beach, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Konyaaltı Beach</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.6</span>
+                <a href="#">80 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                <a href="#">Beach</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>A beautiful long stretch of pebble beach with mountains in the background.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 5. Hadrian’s Gate -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/hadrians-gate.jpg" alt="Hadrian's Gate">
+            <div class="single-explore-img-info">
+                <button>monument</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hadrians Gate', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Hadrians Gate, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-1">
+            <h2><a href="#">Hadrian’s Gate</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.7</span>
+                <a href="#">45 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+                <a href="#">Historic Gate</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Magnificent Roman triumphal arch, symbol of Antalya’s history.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 6. Antalya Aquarium -->
+<div class="col-md-4 col-sm-6">
+    <div class="single-explore-item">
+        <div class="single-explore-img">
+            <img src="assets/images/explore/antalya-aquarium.jpg" alt="Antalya Aquarium">
+            <div class="single-explore-img-info">
+                <button>family</button>
+                <div class="single-explore-image-icon-box">
+                    <ul>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Antalya Aquarium', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Antalya Aquarium, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="single-explore-txt bg-theme-2">
+            <h2><a href="#">Antalya Aquarium</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">4.6</span>
+                <a href="#">90 ratings</a>
+                <span class="explore-price-box">price: <span class="explore-price">200 TL</span></span>
+                <a href="#">Aquarium</a>
+            </p>
+            <div class="explore-person">
+                <div class="row">
+                    <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+                    <div class="col-sm-10"><p>Home to one of the world's longest tunnel aquariums.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 </section>
 <!-- Modal pentru hartă -->
 <div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">

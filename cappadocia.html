@@ -73,6 +73,7 @@
             <div class="welcome-hero-form">
                 <div class="single-welcome-hero-form">
                     <h3>location</h3>
+					<form onsubmit="searchCity(event)">
                     <form action="cappadocia.html">
                         <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
                     </form>
@@ -94,62 +95,204 @@
         <div class="explore-content">
             <div class="row">
 
-                <!-- Goreme Open-Air Museum -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/goreme.jpg" alt="Goreme Museum">
-                            <div class="single-explore-img-info">
-                                <button>Historic</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Goreme Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Goreme Open Air Museum, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-1">
-                            <h2><a href="#">Goreme Open-Air Museum</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.9</span>
-                                <a href="#">50 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">100 TL</span></span>
-                            </p>
-                            <p>World-famous site with ancient cave churches and frescoes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hot Air Balloon Ride -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/balloon.jpg" alt="Hot Air Balloon">
-                            <div class="single-explore-img-info">
-                                <button>Adventure</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hot Air Balloon Ride', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Cappadocia Hot Air Balloon')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-2">
-                            <h2><a href="#">Hot Air Balloon Ride</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">5.0</span>
-                                <a href="#">100 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Varies</span></span>
-                            </p>
-                            <p>Unforgettable sunrise balloon rides over the unique landscapes of Cappadocia.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                <!-- Göreme Open-Air Museum -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/goreme.jpg" alt="Goreme Open-Air Museum">
+      <div class="single-explore-img-info">
+        <button>historic</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Goreme Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Goreme Museum, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
         </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Göreme Open-Air Museum</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.9</span>
+        <a href="#">120 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">150 TL</span></span>
+        <a href="#">Museum</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Rock-cut churches with stunning frescoes, a UNESCO World Heritage Site.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hot Air Balloon Ride -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/balloon.jpg" alt="Hot Air Balloon Ride">
+      <div class="single-explore-img-info">
+        <button>adventure</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Hot Air Balloon', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Goreme, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Hot Air Balloon Ride</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">5.0</span>
+        <a href="#">250 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">2500 TL</span></span>
+        <a href="#">Experience</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>The ultimate Cappadocia experience: flying over the fairy chimneys at sunrise.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Uchisar Castle -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/uchisar-castle.jpg" alt="Uchisar Castle">
+      <div class="single-explore-img-info">
+        <button>viewpoint</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Uchisar Castle', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Uchisar Castle, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Uchisar Castle</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">85 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">50 TL</span></span>
+        <a href="#">Castle</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>The highest point in Cappadocia with panoramic views over the valleys.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Love Valley -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/love-valley.jpg" alt="Love Valley">
+      <div class="single-explore-img-info">
+        <button>nature</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Love Valley', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Love Valley, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Love Valley</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.8</span>
+        <a href="#">65 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Valley</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Famous for its unique rock formations and stunning hiking trails.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Derinkuyu Underground City -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/derinkuyu.jpg" alt="Derinkuyu Underground City">
+      <div class="single-explore-img-info">
+        <button>underground</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Derinkuyu', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Derinkuyu Underground City')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Derinkuyu Underground City</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.6</span>
+        <a href="#">70 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">100 TL</span></span>
+        <a href="#">Underground</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>An incredible multi-level ancient underground city capable of housing thousands of people.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pasabag (Monks Valley) -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/pasabag.jpg" alt="Pasabag Monks Valley">
+      <div class="single-explore-img-info">
+        <button>nature</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Pasabag', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Pasabag Valley, Cappadocia')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Pasabag (Monks Valley)</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">75 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Valley</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Magical valley famous for its giant fairy chimneys and surreal landscape.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
 </section>
 

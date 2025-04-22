@@ -73,6 +73,7 @@
             <div class="welcome-hero-form">
                 <div class="single-welcome-hero-form">
                     <h3>location</h3>
+					<form onsubmit="searchCity(event)">
                     <form action="izmir.html">
                         <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
                     </form>
@@ -93,63 +94,205 @@
         </div>
         <div class="explore-content">
             <div class="row">
-
-                <!-- Clock Tower -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/clock-tower.jpg" alt="Clock Tower">
-                            <div class="single-explore-img-info">
-                                <button>Landmark</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Clock Tower', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Clock Tower, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-1">
-                            <h2><a href="#">Clock Tower</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.8</span>
-                                <a href="#">40 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
-                            </p>
-                            <p>The most iconic symbol of Izmir, located in Konak Square.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kordon Seaside -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-explore-item">
-                        <div class="single-explore-img">
-                            <img src="assets/images/explore/kordon.jpg" alt="Kordon Seaside">
-                            <div class="single-explore-img-info">
-                                <button>Seaside</button>
-                                <div class="single-explore-image-icon-box">
-                                    <ul>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kordon Seaside', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
-                                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kordon, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-explore-txt bg-theme-2">
-                            <h2><a href="#">Kordon Seaside</a></h2>
-                            <p class="explore-rating-price">
-                                <span class="explore-rating">4.7</span>
-                                <a href="#">35 ratings</a>
-                                <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
-                            </p>
-                            <p>A scenic promenade along Izmir's coastline, perfect for walks and sunsets.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<!-- 1. Clock Tower -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/clock-tower.jpg" alt="Clock Tower Izmir">
+      <div class="single-explore-img-info">
+        <button>historic</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Clock Tower', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Clock Tower, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
         </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Clock Tower</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">90 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Monument</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>The iconic symbol of İzmir located in Konak Square, built in 1901.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Kemeraltı Bazaar -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/kemeralti-bazaar.jpg" alt="Kemeraltı Bazaar">
+      <div class="single-explore-img-info">
+        <button>shopping</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kemeraltı Bazaar', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kemeraltı Bazaar, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Kemeraltı Bazaar</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.6</span>
+        <a href="#">70 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Bazaar</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Vibrant and colorful bazaar district, full of local shops and street food.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Kadifekale -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/kadifekale.jpg" alt="Kadifekale">
+      <div class="single-explore-img-info">
+        <button>historic</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Kadifekale', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Kadifekale, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Kadifekale</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.5</span>
+        <a href="#">55 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Castle</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Ancient hilltop fortress with panoramic views over İzmir and the coastline.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Alsancak -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/alsancak.jpg" alt="Alsancak">
+      <div class="single-explore-img-info">
+        <button>lifestyle</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Alsancak', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Alsancak, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Alsancak</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.8</span>
+        <a href="#">80 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">District</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Trendy area filled with cafés, boutiques, and the famous Kordon seaside promenade.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. İzmir Archaeological Museum -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/izmir-archaeological-museum.jpg" alt="Izmir Archaeological Museum">
+      <div class="single-explore-img-info">
+        <button>museum</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Izmir Archaeological Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Izmir Archaeological Museum')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">İzmir Archaeological Museum</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.6</span>
+        <a href="#">40 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">50 TL</span></span>
+        <a href="#">Museum</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Rich collection of artifacts from ancient Smyrna and surrounding areas.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Agora of Smyrna -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/agora-of-smyrna.jpg" alt="Agora of Smyrna">
+      <div class="single-explore-img-info">
+        <button>archaeology</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Agora of Smyrna', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Agora of Smyrna, Izmir')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Agora of Smyrna</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.5</span>
+        <a href="#">50 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">30 TL</span></span>
+        <a href="#">Ancient Agora</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2"><div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div></div>
+          <div class="col-sm-10"><p>Ruins of the ancient marketplace of Smyrna, beautifully preserved in the heart of Izmir.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                
     </div>
 </section>
 <!-- Modal pentru hartă -->

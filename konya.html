@@ -1,0 +1,682 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Explore Konya - ExploreTurkey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<!-- header-top start -->
+<header id="header-top" class="header-top">
+    <ul>
+        <li>
+            <div class="header-top-left">
+                <ul>
+                    <li class="select-opt">
+                        <select name="language" id="language">
+                            <option value="default">EN</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <select name="currency" id="currency">
+                            <option value="usd">USD</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!-- Navigation Start -->
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+                </div>
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="#explore">explore</a></li>
+                        <li class="scroll"><a href="#reviews">review</a></li>
+                        <li class="scroll"><a href="#contact">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<!-- Welcome Hero -->
+<section id="home" class="welcome-hero" style="background: url('assets/images/turkey/konya.jpg') no-repeat center center/cover;">
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <h2>Explore Konya</h2>
+            <p>Discover the spiritual heart of Turkey, home of Rumi and the Whirling Dervishes.</p>
+        </div>
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3>location</h3>
+					<form onsubmit="searchCity(event)">
+                    <form action="konya.html">
+                        <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
+                    </form>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" onclick="searchCity(event)">search</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore Konya -->
+<section id="explore" class="explore">
+    <div class="container">
+        <div class="section-header">
+            <h2>Explore Konya</h2>
+        </div>
+        <div class="explore-content">
+            <div class="row">
+
+ <!-- 1. Mevlana Museum -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/mevlana.jpg" alt="Mevlana Museum">
+      <div class="single-explore-img-info">
+        <button>spiritual</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Mevlana Museum', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Mevlana Museum, Konya')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Mevlana Museum</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">5.0</span>
+        <a href="#">300 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Museum</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div>
+          </div>
+          <div class="col-sm-10">
+            <p>The tomb of Rumi (Mevlana), founder of the Mevlevi Order, an important spiritual site.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Alaeddin Mosque -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/alaeddin-mosque.jpg" alt="Alaeddin Mosque">
+      <div class="single-explore-img-info">
+        <button>historic</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Alaeddin Mosque', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Alaeddin Mosque, Konya')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-2">
+      <h2><a href="#">Alaeddin Mosque</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.7</span>
+        <a href="#">120 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">Free</span></span>
+        <a href="#">Mosque</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div>
+          </div>
+          <div class="col-sm-10">
+            <p>Historical mosque from the Seljuk period, built atop Konya's central hill.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Karatay Madrasa -->
+<div class="col-md-4 col-sm-6">
+  <div class="single-explore-item">
+    <div class="single-explore-img">
+      <img src="assets/images/explore/karatay-madrasa.jpg" alt="Karatay Madrasa">
+      <div class="single-explore-img-info">
+        <button>museum</button>
+        <div class="single-explore-image-icon-box">
+          <ul>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Karatay Madrasa', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+            <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Karatay Madrasa, Konya')"><i class="fa fa-map-marker"></i></a></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="single-explore-txt bg-theme-1">
+      <h2><a href="#">Karatay Madrasa</a></h2>
+      <p class="explore-rating-price">
+        <span class="explore-rating">4.6</span>
+        <a href="#">90 ratings</a>
+        <span class="explore-price-box">price: <span class="explore-price">50 TL</span></span>
+        <a href="#">Museum</a>
+      </p>
+      <div class="explore-person">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="explore-person-img"><a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a></div>
+          </div>
+          <div class="col-sm-10">
+            <p>Beautiful 13th-century school now turned into a museum, famous for its Seljuk tiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+</section>
+
+<!-- Modal pentru hartă -->
+<div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+    <span class="close" onclick="closeMap()" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+    <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+		<!--reviews start -->
+		<section id="reviews" class="reviews">
+			<div class="section-header">
+				<h2>clients reviews</h2>
+				<p>What our clients say about Turkey!</p>
+			</div><!--/.section-header-->
+			<div class="reviews-content">
+				<div class="testimonial-carousel">
+		            <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c3.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Zeynep Kaya</h2>
+									<h4>Pamukkale</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									"Pamukkale’nin beyaz terasları harika. Termal su çok rahatlatıcı. Doğa ve huzur bir arada."
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+		              <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="assets/images/clients/c5.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>Hasan Aydın</h2>
+									<h4>Pamukkale</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									"Pamukkale’de yürümek ay gibi hissettiriyor. Su sıcak ve manzara harika!"
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				</div>
+			</div>
+
+		</section><!--/.reviews-->
+		<!--reviews end -->
+		<!--blog start -->
+		<section id="blog" class="blog" >
+			<div class="container">
+				<div class="section-header">
+					<h2>news and articles</h2>
+					<p>Always upto date with our latest News and Articles </p>
+				</div><!--/.section-header-->
+				<div class="blog-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/b1.jpg" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/b2.jpg" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="assets/images/blog/b3.jpg" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+			
+		</section><!--/.blog-->
+		<!--blog end -->
+
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Plan Your Trip
+					</h2>
+					<p>
+						Do you have questions about famous landmarks in Turkey or need help planning your cultural journey?<br> Get in touch with us – we’re here to guide you!
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#">
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here">
+								<button class="appsLand-btn subscribe-btn" onclick="submitEmailLogin(event)">
+    create account
+</button>
+
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+
+		<!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="footer-menu">
+		           	<div class="row">
+			           	<div class="col-sm-3">
+			           		 <div class="navbar-header">
+				                <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+				            </div><!--/.navbar-header-->
+			           	</div>
+			           	<div class="col-sm-9">
+			           		<ul class="footer-menu-item">			         
+			                    <li class="scroll"><a href="#explore">explore</a></li>
+			                    <li class="scroll"><a href="#reviews">review</a></li>
+			                    <li class="scroll"><a href="#blog">blog</a></li>
+			                    <li class="scroll"><a href="#contact">contact</a></li>
+			                    <li class=" scroll"><a href="#contact">my account</a></li>
+			                </ul><!--/.nav -->
+			           	</div>
+		           </div>
+				</div>
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by Alice, Ioana & Andreea.
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<a href="#facebook"><i class="fa fa-facebook"></i></a>	
+								<a href="#twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#linkedin"><i class="fa fa-linkedin"></i></a>
+								<a href="#googleplus"><i class="fa fa-google-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+			
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
+		<!--footer end-->
+		<!-- Message box -->
+     <div id="message-box" class="message-box hidden"></div>
+<!-- Slide simplu pentru My Favorites -->
+<div id="favorites-panel" class="favorites-slide">
+  <span class="close-favorites" onclick="toggleFavoritesPanel()">x</span>
+  <h3 class="favorites-title">My Favorites</h3>
+  <p style="color: white;">Acesta este un panou demonstrativ</p>
+</div>
+
+<!-- Modal pentru hartă -->
+<div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+    <span class="close" onclick="closeMap()" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+    <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- Include all js compiled plugins (below), or include individual files as needed -->
+  <script>
+let lastScrollTop = 0;
+const header = document.querySelector('.header-area');
+
+window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+        // scroll în jos → ascunde
+        header.classList.add('hide');
+    } else {
+        // scroll în sus → arată
+        header.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+</script>
+
+<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+        <!--feather.min.js-->
+        <script  src="assets/js/feather.min.js"></script>
+
+        <!-- counter js -->
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+
+        <!--slick.min.js-->
+        <script src="assets/js/slick.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script>
+    /*const citiesInTurkey = [
+        "istanbul", "ankara", "izmir", "antalya", "bursa",
+        "adana", "gaziantep", "konya", "trabzon", "kayseri",
+        "mardin", "sanliurfa", "cappadocia", "pamukkale"
+    ];*/
+
+    function searchCity(event) {
+    event.preventDefault();
+    const input = document.getElementById("location-input").value.trim().toLowerCase();
+
+    const citiesMap = {
+        "istanbul": "istanbul.html",
+        "ankara": "ankara.html",
+        "izmir": "izmir.html",
+        "antalya": "antalya.html",
+        "bursa": "bursa.html",
+        "adana": "adana.html",
+        "gaziantep": "gaziantep.html",
+        "konya": "konya.html",
+        "trabzon": "trabzon.html",
+        "kayseri": "kayseri.html",
+        "mardin": "mardin.html",
+        "sanliurfa": "sanliurfa.html",
+        "cappadocia": "cappadocia.html",
+        "pamukkale": "pamukkale.html"
+    };
+
+    if (citiesMap[input]) {
+        window.location.href = citiesMap[input];
+    } else {
+        alert("Orașul nu este în lista noastră din Turcia. Încearcă altul!");
+    }
+}
+
+
+</script>
+<!-- Pop-up pentru text (How It Works) -->
+<div id="popuptext" class="popuptext" style="display: none;">
+    <span class="close" onclick="closePopupText()">&times;</span>
+    <div class="popuptext-content">
+        <p id="popuptext-content-text"></p>
+    </div>
+</div>
+
+
+
+ <script>
+function openPopupText(text) {
+    document.getElementById("popuptext-content-text").innerText = text;
+    document.getElementById("popuptext").style.display = "flex";
+}
+
+function closePopupText() {
+    document.getElementById("popuptext").style.display = "none";
+}
+</script>
+
+	<script>
+let isLoggedIn = false;
+let favorites = [];
+let userProfileImage = "assets/images/users/user-placeholder.jpg"; // default profile image
+
+function login() {
+    isLoggedIn = true;
+    updateNavbar();
+    showMessage("You are now logged in!");
+
+    const scrollBack = localStorage.getItem("preLoginScroll");
+    if (scrollBack) {
+        setTimeout(() => {
+            window.scrollTo({ top: parseInt(scrollBack), behavior: 'smooth' });
+            localStorage.removeItem("preLoginScroll");
+        }, 300); // mic delay după mesaj
+    }
+}
+
+
+function redirectToCreateAccount() {
+    // Salvăm poziția Y
+    localStorage.setItem("preLoginScroll", window.scrollY);
+    showMessage("Please log in with your email to like places.");
+    document.querySelector("#contact").scrollIntoView({ behavior: 'smooth' });
+}
+
+
+function toggleLike(name, iconElement) {
+    if (!isLoggedIn) {
+        redirectToCreateAccount();
+        return;
+    }
+
+    const index = favorites.indexOf(name);
+
+    if (index === -1) {
+        favorites.push(name);
+        showMessage(`${name} added to favorites!`);
+        iconElement.classList.remove("fa-heart-o");
+        iconElement.classList.add("fa-heart");
+        iconElement.style.color = "red";
+    } else {
+        favorites.splice(index, 1);
+        showMessage(`${name} removed from favorites.`);
+        iconElement.classList.remove("fa-heart");
+        iconElement.classList.add("fa-heart-o");
+        iconElement.style.color = "";
+    }
+}
+
+function openFavorites() {
+    if (!isLoggedIn) {
+        showMessage("Please log in to view your favorites.");
+        return;
+    }
+
+    const panel = document.getElementById("favorites-slide");
+    panel.classList.add("show");
+
+    const container = document.getElementById("favorites-list");
+    container.innerHTML = ""; // clear list
+
+    favorites.forEach(name => {
+        container.innerHTML += `
+            <div class="favorite-card">
+                <img src="assets/images/explore/${name.toLowerCase().replaceAll(' ', '-')}.jpg" alt="${name}">
+                <div class="content">
+                    <h4>${name}</h4>
+                    <small>Rating: 5.0 ★</small>
+                    <p>Description for ${name}...</p>
+                </div>
+            </div>
+        `;
+    });
+
+    if (favorites.length === 0) {
+        container.innerHTML = "<p>No favorites yet.</p>";
+    }
+}
+
+function closeFavorites() {
+    document.getElementById("favorites-slide").classList.remove("show");
+}
+
+
+function updateNavbar() {
+    const nav = document.querySelector(".nav.navbar-nav.navbar-right");
+    nav.innerHTML += `
+       <li class="scroll"><a href="#" onclick="toggleFavoritesPanel()">My Favorites</a></li>
+
+        <li>
+            <a href="#">
+                <img src="${userProfileImage}" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
+            </a>
+        </li>
+    `;
+}
+
+function submitEmailLogin(event) {
+    event.preventDefault();
+    const email = document.querySelector(".subscription-input-form").value.trim();
+    if (email === "") {
+        showMessage("Please enter a valid email.");
+        return;
+    }
+	
+    if (!isLoggedIn) {
+        login(); // activează login-ul
+    } else {
+        showMessage("You are already logged in.");
+    }
+   /* login(); // simulăm logarea*/
+}
+
+
+</script>
+<script>
+function showMessage(text) {
+    const box = document.getElementById("message-box");
+    box.textContent = text;
+    box.classList.remove("hidden");
+    box.classList.add("show");
+
+    setTimeout(() => {
+        box.classList.remove("show");
+        box.classList.add("hidden");
+    }, 2500); // 2.5 secunde
+}
+</script>
+<script>
+  function toggleFavoritesPanel() {
+    const panel = document.getElementById("favorites-panel");
+    panel.classList.toggle("open");
+  }
+</script>
+<script>
+function openMap(location) {
+    const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+    document.getElementById('mapIframe').src = mapUrl;
+    document.getElementById('mapModal').style.display = 'block';
+}
+
+function closeMap() {
+    document.getElementById('mapModal').style.display = 'none';
+    document.getElementById('mapIframe').src = ''; // reset la închidere
+}
+</script>
+
+</body>
+</html>

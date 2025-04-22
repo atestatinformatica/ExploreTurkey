@@ -467,6 +467,24 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         7. Explore
 --------------------------------------*/
+.explore-content .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.explore-content .col-md-4,
+.explore-content .col-sm-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-explore-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .explore{
     padding:117px 0 95px;
     background: #f8fafb;

@@ -806,6 +806,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     box-shadow: 0 10px 20px rgba(21,19,19,.4);
 }
 
+.single-blog-item-img img {
+    width: 100%;
+    height: 200px; /* poți ajusta înălțimea după preferințe */
+    object-fit: cover;
+    object-position: center;
+
+}
 
 /*-------------------------------------
         11. Subscribe

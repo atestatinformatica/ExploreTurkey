@@ -1155,6 +1155,8 @@ function updateNavbar() {
     const nav = document.querySelector(".nav.navbar-nav.navbar-right");
     nav.innerHTML += `
        <li class="scroll"><a href="#" onclick="toggleFavoritesPanel()">My Favorites</a></li>
+	   <li class="scroll"><a href="#" onclick="logout()">Logout</a></li>
+
 
         <li>
             <a href="#">
@@ -1172,16 +1174,26 @@ function submitEmailLogin(event) {
         return;
     }
 	
-    if (!isLoggedIn) {
-        login(); // activează login-ul
-    } else {
+  if (!isLoggedIn) {
+    isLoggedIn = true;
+    localStorage.setItem("isLoggedIn", "true"); // ✅ salvăm în localStorage
+    login(); // activează login-ul
+}else {
         showMessage("You are already logged in.");
     }
-   /* login(); // simulăm logarea*/
+
 }
 
 
 </script>
+<script>
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    isLoggedIn = false;
+    location.href = "index.html";
+}
+</script>
+
 <script>
 function showMessage(text) {
     const box = document.getElementById("message-box");
@@ -1213,6 +1225,15 @@ function closeMap() {
     document.getElementById('mapIframe').src = ''; // reset la închidere
 }
 </script>
+<script>
+window.onload = function () {
+    if (localStorage.getItem("isLoggedIn") === "true") {
+        isLoggedIn = true;
+        updateNavbar();
+    }
+};
+</script>
+
     </body>
 	
 </html>

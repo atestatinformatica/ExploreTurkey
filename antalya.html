@@ -50,7 +50,7 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-</head>
+<link rel="stylesheet" href="assets/css/favorites-style.css"></head>
 
 <body>
 <!-- header-top start -->
@@ -246,7 +246,7 @@
                 <button>nature</button>
                 <div class="single-explore-image-icon-box">
                     <ul>
-                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Duden Waterfalls', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
+                        <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); toggleLike('Duden', this.querySelector('i'))"><i class="fa fa-heart-o"></i></a></div></li>
                         <li><div class="single-explore-image-icon"><a href="#" onclick="event.preventDefault(); openMap('Duden Waterfalls, Antalya')"><i class="fa fa-map-marker"></i></a></div></li>
                     </ul>
                 </div>
@@ -682,7 +682,8 @@
 <div id="favorites-panel" class="favorites-slide">
   <span class="close-favorites" onclick="toggleFavoritesPanel()">x</span>
   <h3 class="favorites-title">My Favorites</h3>
-  <p style="color: white;">Acesta este un panou demonstrativ</p>
+  <div class="favorites-list"></div> <!-- Asta lipsea! -->
+  <div id="message-box" class="message-box hidden"></div>
 </div>
 
 <!-- Modal pentru hartă -->
@@ -763,7 +764,7 @@ window.addEventListener('scroll', function () {
     if (citiesMap[input]) {
         window.location.href = citiesMap[input];
     } else {
-        alert("Orașul nu este în lista noastră din Turcia. Încearcă altul!");
+        alert("The city is not on our list in Turkey. Try another one!");
     }
 }
 
@@ -790,151 +791,7 @@ function closePopupText() {
 }
 </script>
 
-	<script>
-let isLoggedIn = false;
-let favorites = [];
-let userProfileImage = "assets/images/users/user-placeholder.jpg"; // default profile image
-
-function login() {
-    isLoggedIn = true;
-    updateNavbar();
-    showMessage("You are now logged in!");
-
-    const scrollBack = localStorage.getItem("preLoginScroll");
-    if (scrollBack) {
-        setTimeout(() => {
-            window.scrollTo({ top: parseInt(scrollBack), behavior: 'smooth' });
-            localStorage.removeItem("preLoginScroll");
-        }, 300); // mic delay după mesaj
-    }
-}
-
-
-function redirectToCreateAccount() {
-    // Salvăm poziția Y
-    localStorage.setItem("preLoginScroll", window.scrollY);
-    showMessage("Please log in with your email to like places.");
-    document.querySelector("#contact").scrollIntoView({ behavior: 'smooth' });
-}
-
-
-function toggleLike(name, iconElement) {
-    if (!isLoggedIn) {
-        redirectToCreateAccount();
-        return;
-    }
-
-    const index = favorites.indexOf(name);
-
-    if (index === -1) {
-        favorites.push(name);
-        showMessage(`${name} added to favorites!`);
-        iconElement.classList.remove("fa-heart-o");
-        iconElement.classList.add("fa-heart");
-        iconElement.style.color = "red";
-    } else {
-        favorites.splice(index, 1);
-        showMessage(`${name} removed from favorites.`);
-        iconElement.classList.remove("fa-heart");
-        iconElement.classList.add("fa-heart-o");
-        iconElement.style.color = "";
-    }
-}
-
-function openFavorites() {
-    if (!isLoggedIn) {
-        showMessage("Please log in to view your favorites.");
-        return;
-    }
-
-    const panel = document.getElementById("favorites-slide");
-    panel.classList.add("show");
-
-    const container = document.getElementById("favorites-list");
-    container.innerHTML = ""; // clear list
-
-    favorites.forEach(name => {
-        container.innerHTML += `
-            <div class="favorite-card">
-                <img src="assets/images/explore/${name.toLowerCase().replaceAll(' ', '-')}.jpg" alt="${name}">
-                <div class="content">
-                    <h4>${name}</h4>
-                    <small>Rating: 5.0 ★</small>
-                    <p>Description for ${name}...</p>
-                </div>
-            </div>
-        `;
-    });
-
-    if (favorites.length === 0) {
-        container.innerHTML = "<p>No favorites yet.</p>";
-    }
-}
-
-function closeFavorites() {
-    document.getElementById("favorites-slide").classList.remove("show");
-}
-
-
-function updateNavbar() {
-    const nav = document.querySelector(".nav.navbar-nav.navbar-right");
-    nav.innerHTML += `
-       <li class="scroll"><a href="#" onclick="toggleFavoritesPanel()">My Favorites</a></li>
-	   <li class="scroll"><a href="#" onclick="logout()">Logout</a></li>
-        <li>
-            <a href="#">
-                <img src="${userProfileImage}" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
-            </a>
-        </li>
-    `;
-}
-
-function submitEmailLogin(event) {
-    event.preventDefault();
-    const email = document.querySelector(".subscription-input-form").value.trim();
-    if (email === "") {
-        showMessage("Please enter a valid email.");
-        return;
-    }
 	
-if (!isLoggedIn) {
-    isLoggedIn = true;
-    localStorage.setItem("isLoggedIn", "true"); // ✅ salvăm în localStorage
-    login(); // activează login-ul
-}else {
-        showMessage("You are already logged in.");
-    }
-}
-
-
-</script>
-<script>
-function logout() {
-    localStorage.removeItem("isLoggedIn");
-    isLoggedIn = false;
-    location.href = "index.html";
-}
-</script>
-
-<script>
-function showMessage(text) {
-    const box = document.getElementById("message-box");
-    box.textContent = text;
-    box.classList.remove("hidden");
-    box.classList.add("show");
-
-    setTimeout(() => {
-        box.classList.remove("show");
-        box.classList.add("hidden");
-    }, 2500); // 2.5 secunde
-}
-</script>
-<script>
-  function toggleFavoritesPanel() {
-    const panel = document.getElementById("favorites-panel");
-    panel.classList.toggle("open");
-  }
-</script>
 <script>
 function openMap(location) {
     const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
@@ -947,19 +804,14 @@ function closeMap() {
     document.getElementById('mapIframe').src = ''; // reset la închidere
 }
 </script>
-<script>
-window.onload = function () {
-    if (localStorage.getItem("isLoggedIn") === "true") {
-        isLoggedIn = true;
-        updateNavbar();
-    }
-};
-</script>
+
 
 
 
         <!-- JAVASCRIPTS -->
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/favorites.js"></script>
+
         
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

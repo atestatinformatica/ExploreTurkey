@@ -1,3 +1,4 @@
+
 let isLoggedIn = false;
 let favorites = [];
 let userProfileImage = "assets/images/users/user-placeholder.jpg";
@@ -60,23 +61,54 @@ function refreshFavoritesPanel() {
     const container = panel.querySelector(".favorites-list");
     container.innerHTML = "";
 
-    const favoritesData = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (favoritesData.length === 0) {
+    const favoritesNames = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    if (favoritesNames.length === 0) {
         container.innerHTML = "<p>No favorites yet.</p>";
     } else {
-        favoritesData.forEach(name => {
-            container.innerHTML += `
-                <div class="favorite-card">
-                    <img src="assets/images/explore/${name.toLowerCase().replaceAll(' ', '-')}.jpg" alt="${name}" style="width:80px; height:80px; object-fit:cover;">
-                    <div class="content">
-                        <h4>${name}</h4>
+        favoritesNames.forEach(name => {
+            const item = locationsData.find(loc => loc.name === name);
+            if (item) {
+                container.innerHTML += `
+                    <div class="single-explore-item">
+                        <div class="single-explore-img">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="single-explore-img-info">
+                                <button>${item.tag}</button>
+                                <div class="single-explore-image-icon-box"></div>
+                            </div>
+                        </div>
+                        <div class="single-explore-txt ${item.themeClass}">
+                            <h2><a href="#">${item.name}</a></h2>
+                            <p class="explore-rating-price">
+                                <span class="explore-rating">${item.rating}</span>
+                                <a href="#">${item.ratingsCount}</a>
+                                <span class="explore-price-box">price: <span class="explore-price">${item.price}</span></span>
+                                <a href="#">${item.type}</a>
+                            </p>
+                            <div class="explore-person">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="explore-person-img">
+                                            <a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <p>${item.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            `;
+                `;
+            }
         });
+
         container.innerHTML += `<button onclick="clearFavorites()" class="clear-favorites-btn">Clear All</button>`;
     }
 }
+
+
 
 function clearFavorites() {
     if (confirm("Are you sure you want to clear all favorites?")) {

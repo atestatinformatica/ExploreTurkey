@@ -1,0 +1,98 @@
+/* Slide-ul pentru My Favorites */
+.favorites-slide {
+  position: fixed;
+  top: 0;
+  right: -25%;
+  width: 25%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.4s ease-in-out;
+  border-left: 2px solid #eee;
+}
+
+.favorites-slide.open {
+  right: 0;
+}
+
+/* Titlul de sus */
+.favorites-title {
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* X-ul de închidere */
+.close-favorites {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close-favorites:hover {
+  color: #ff5a5f;
+}
+
+/* Lista de favorite */
+.favorites-list {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar personalizat */
+.favorites-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.favorites-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.favorites-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.favorites-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animatie la deschiderea slide-ului */
+.favorites-slide.open .favorites-list {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Buton Clear All */
+.clear-favorites-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 8px 16px;
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-favorites-btn:hover {
+  background-color: #e14b50;
+}

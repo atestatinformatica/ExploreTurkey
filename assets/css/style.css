@@ -1122,45 +1122,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     display: none;
 }
 
-/* stiluri slide my favorites*/
-.favorites-slide {
-  position: fixed;
-  top: 0;
-  right: -25%; /* ascuns inițial în afara ecranului */
-  width: 25%;
-  height: 100%;
-  background-color: #f8f9fa;
-  opacity: 0.3; /* aproape transparent */
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  padding: 20px;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-}
 
-.favorites-slide.open {
-  right: 0; /* când e deschis, îl aducem în ecran */
-}
 
-.favorites-title {
-  color: #859098;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-.close-favorites {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-.close-favorites:hover {
-  color: black;
-}
 
 
 

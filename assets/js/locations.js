@@ -30,7 +30,7 @@ const locationsData = [
         type: "Religious Monument",
         description: "Mausoleum of Rumi — spiritual and Sufi symbol located in Konya.",
         themeClass: "bg-theme-3",
-	tag: ""top visited
+	tag: "top visited"
     },
     {
         name: "Ephesus",

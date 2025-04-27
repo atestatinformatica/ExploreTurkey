@@ -18,7 +18,8 @@ const locationsData = [
         price: "150 TL",
         type: "Natural Destination",
         description: "White terraces and thermal waters — a unique natural wonder of the world.",
-        themeClass: "bg-theme-2"
+        themeClass: "bg-theme-2",
+	tag: "featured"
     },
     {
         name: "Mevlana Museum",
@@ -28,7 +29,8 @@ const locationsData = [
         price: "Free",
         type: "Religious Monument",
         description: "Mausoleum of Rumi — spiritual and Sufi symbol located in Konya.",
-        themeClass: "bg-theme-3"
+        themeClass: "bg-theme-3",
+	tag: ""top visited
     },
     {
         name: "Ephesus",
@@ -38,7 +40,8 @@ const locationsData = [
         price: "200 TL",
         type: "Archaeological Site",
         description: "Ancient city with Roman ruins including the famous Library of Celsus.",
-        themeClass: "bg-theme-5"
+        themeClass: "bg-theme-5",
+	tag: "ancient"
     },
     {
         name: "Sumela Monastery",
@@ -48,7 +51,8 @@ const locationsData = [
         price: "100 TL",
         type: "Monastery",
         description: "Spectacular cliffside monastery with panoramic mountain views.",
-        themeClass: "bg-theme-1"
+        themeClass: "bg-theme-1",
+	tag: "religious"
     },
     {
         name: "Topkapi",
@@ -58,7 +62,8 @@ const locationsData = [
         price: "200 TL",
         type: "Palace",
         description: "Former residence of the Ottoman sultans — now an open-air museum.",
-        themeClass: "bg-theme-4"
+        themeClass: "bg-theme-4",
+	tag: "historic"
     },
     {
         name: "Blue Mosque",

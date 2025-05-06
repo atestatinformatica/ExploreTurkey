@@ -725,6 +725,98 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
   opacity: 1;
 }
 /*.slick-slide*/
+.review-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* fundal semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #ffffff; /* alb clar */
+    padding: 30px;
+    border-radius: 12px;
+    width: 500px; /* fă-l mai mare dacă vrei (ex: 500px) */
+	height:400px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+/* Elemente din formular */
+.popup-content label,
+.popup-content select,
+.popup-content textarea {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.popup-content textarea {
+    resize: none; /* permite doar mărirea pe înălțime */
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.star-rating span {
+  font-size: 30px; cursor: pointer; color: #ccc;
+}
+.star-rating .selected {
+  color: gold;
+}
+.hidden {
+  display: none;
+}
+.review-button {
+  background-color: #007bff; /* Albastru vibrant */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.review-button:hover {
+  background-color: #0056b3; /* Nuanta mai închisă la hover */
+}
+
+.review-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.review-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.review-button:hover {
+  background-color: #0056b3;
+}
+
 
 /*-------------------------------------       
         9.  Counter
@@ -867,19 +959,18 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 }
 /*custom-input-group*/
 
+
 /*appsLand-btn*/
 .appsLand-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 230px;
+    right: 240px;
     background: #ff545a;
     display: inline-block;
     width: 180px;
     height: 60px;
     line-height: 60px;
     text-decoration: none;
-    border-top-right-radius:3px;
-    border-bottom-right-radius:3px;
     text-transform:capitalize;
     color: #fff;
     font-size: 16px;
@@ -1123,7 +1214,141 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 }
 
 
+.review-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #eee;
+    margin-top: 40px;
+    text-align: center;
+}
 
+.leave-review-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.leave-review-btn:hover {
+    background-color: #0056b3;
+}
+
+#review-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#review-form-wrapper.hidden {
+    display: none;
+}
+
+#review-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#review-form-wrapper textarea {
+    resize: vertical;
+    height: 100px;
+    padding: 10px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.city-review-block {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.city-review-block h4 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+
+.review-entry {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.review-entry strong {
+    color: #333;
+}
+
+.review-entry button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.city-review-block {
+    margin: 50px auto;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.review-delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
 
 
 

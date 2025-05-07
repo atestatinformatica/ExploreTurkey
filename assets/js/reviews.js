@@ -1,4 +1,4 @@
-/*function submitReview(event) {
+function submitReview(event) {
     event.preventDefault();
     if (!isLoggedIn || !currentUserEmail) {
         alert("Please log in to leave a review.");
@@ -83,6 +83,8 @@ function toggleReviewForm() {
     const wrapper = document.getElementById("review-form-wrapper");
     wrapper.classList.toggle("hidden");
 }*/
+
+
 document.getElementById("review-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -113,4 +115,3 @@ document.getElementById("review-form").addEventListener("submit", function (e) {
     // Golește formularul
     e.target.reset();
 });
-

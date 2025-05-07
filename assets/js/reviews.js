@@ -1,4 +1,4 @@
-function submitReview(event) {
+/*function submitReview(event) {
     event.preventDefault();
     if (!isLoggedIn || !currentUserEmail) {
         alert("Please log in to leave a review.");
@@ -82,5 +82,35 @@ function deleteReview(city, email) {
 function toggleReviewForm() {
     const wrapper = document.getElementById("review-form-wrapper");
     wrapper.classList.toggle("hidden");
-}
+}*/
+document.getElementById("review-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const city = document.getElementById("review-city").value;
+    const text = document.getElementById("review-text").value;
+    const rating = parseInt(document.getElementById("review-rating").value);
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser || !city || !text || !rating) {
+        alert("Please make sure you're logged in and all fields are filled out.");
+        return;
+    }
+
+    const newReview = {
+        email: currentUser.email,
+        text,
+        rating
+    };
+
+    const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+    reviews.push(newReview);
+    localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+    alert("Review submitted successfully!");
+
+    // Reafișează toate recenziile
+    renderAllReviews();
+    // Golește formularul
+    e.target.reset();
+});
 

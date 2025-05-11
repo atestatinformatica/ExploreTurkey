@@ -1,117 +1,95 @@
-function submitReview(event) {
-    event.preventDefault();
-    if (!isLoggedIn || !currentUserEmail) {
-        alert("Please log in to leave a review.");
-        return;
-    }
+// reviews.js
 
-    const form = event.target;
-    const city = form.querySelector("#city-select").value;
-    const text = form.querySelector("textarea").value.trim();
-    const rating = parseInt(form.querySelectorAll("select")[1].value);
-
-    if (!city || !text) return;
-
-    const key = `reviews_${city}`;
-    let reviews = JSON.parse(localStorage.getItem(key)) || [];
-
-    // Remove existing review from this user
-    reviews = reviews.filter(r => r.email !== currentUserEmail);
-
-    reviews.push({ email: currentUserEmail, text, rating });
-    localStorage.setItem(key, JSON.stringify(reviews));
-
-    form.reset();
-    renderAllReviews();
+// Inițializare Slick Carousel
+function initializeCarousel() {
+  $('.testimonial-carousel').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 }
 
+// Funcție pentru a adăuga recenzii dinamice
 function renderAllReviews() {
-	const container = document.getElementById("all-reviews-container");
+  const container = document.querySelector('.testimonial-carousel');
+  if (!container) return;
 
-    const container = document.querySelector(".testimonial-carousel");
-    if (!container) return;
+  // Păstrează recenziile hardcodate existente
+  const hardcoded = Array.from(container.querySelectorAll('.single-testimonial-box'));
+  container.innerHTML = '';
+  hardcoded.forEach((box) => container.appendChild(box));
 
-    const initialReviews = container.innerHTML; // salvăm review-urile hardcodate
-    container.innerHTML = initialReviews;       // păstrăm ce era inițial
+  const cities = [
+    'istanbul', 'ankara', 'izmir', 'antalya', 'bursa',
+    'adana', 'gaziantep', 'konya', 'trabzon', 'kayseri',
+    'mardin', 'sanliurfa', 'cappadocia', 'pamukkale',
+  ];
 
-    const cities = [
-        "istanbul", "ankara", "izmir", "antalya", "bursa",
-        "adana", "gaziantep", "konya", "trabzon", "kayseri",
-        "mardin", "sanliurfa", "cappadocia", "pamukkale"
-    ];
+  const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
 
-    cities.forEach(city => {
-        const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
-        reviews.forEach(r => {
-            const reviewHTML = `
-                <div class="single-testimonial-box">
-                    <div class="testimonial-description">
-                        <div class="testimonial-info">
-                            <div class="testimonial-img">
-                                <img src="assets/images/users/user-placeholder.jpg" alt="User" style="border-radius:50%; width:70px; height:70px;">
-                            </div>
-                            <div class="testimonial-person">
-                                <h2>${r.email.split('@')[0]}</h2>
-                                <h4>${city.charAt(0).toUpperCase() + city.slice(1)}</h4>
-                                <div class="testimonial-person-star">
-                                    ${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-comment">
-                            <p>"${r.text}"</p>
-                        </div>
-                        ${r.email === currentUserEmail ? `<button onclick="deleteReview('${city}', '${r.email}')" class="review-delete-btn" style="margin-top:10px;">Delete</button>` : ""}
-                    </div>
-                </div>
-            `;
-            container.innerHTML += reviewHTML;
-        });
-    });
-}
-
-
-
-
-function deleteReview(city, email) {
-    let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
-    reviews = reviews.filter(r => r.email !== email);
-    localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
-    renderAllReviews();
-}
-function toggleReviewForm() {
-    const wrapper = document.getElementById("review-form-wrapper");
-    wrapper.classList.toggle("hidden");
-}*/
-
-
-document.getElementById("review-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const city = document.getElementById("review-city").value;
-    const text = document.getElementById("review-text").value;
-    const rating = parseInt(document.getElementById("review-rating").value);
-
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    if (!currentUser || !city || !text || !rating) {
-        alert("Please make sure you're logged in and all fields are filled out.");
-        return;
-    }
-
-    const newReview = {
-        email: currentUser.email,
-        text,
-        rating
-    };
-
+  cities.forEach((city) => {
     const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
-    reviews.push(newReview);
-    localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
 
-    alert("Review submitted successfully!");
+    reviews.forEach((r) => {
+      const div = document.createElement('div');
+      div.className = 'single-testimonial-box';
+      div.innerHTML = `
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="${r.photo || 'assets/images/clients/c7.png'}" alt="clients">
+            </div>
+            <div class="testimonial-person">
+              <h2>${r.name || r.email.split('@')[0]}</h2>
+              <h4>${city.charAt(0).toUpperCase() + city.slice(1)}</h4>
+              <div class="testimonial-person-star">
+                ${'<i class="fa fa-star"></i>'.repeat(r.rating)}
+                ${'<i class="fa fa-star-o"></i>'.repeat(5 - r.rating)}
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-comment">
+            <p>"${r.text}"</p>
+          </div>
+          ${
+            r.email === currentUser.email
+              ? `
+            <div class="testimonial-controls">
+              <button onclick="editReview('${city}', '${r.email}')" class="review-button">Edit</button>
+              <button onclick="deleteReview('${city}', '${r.email}')" class="review-button" style="background-color:#dc3545;">Delete</button>
+            </div>`
+              : ''
+          }
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  });
 
-    // Reafișează toate recenziile
-    renderAllReviews();
-    // Golește formularul
-    e.target.reset();
+  // Reîmprospătează caruselul
+  if ($('.testimonial-carousel').hasClass('slick-initialized')) {
+    $('.testimonial-carousel').slick('unslick');
+  }
+  initializeCarousel();
+}
+
+// Apelare funcții la încărcarea paginii
+$(document).ready(function () {
+  initializeCarousel();
+  renderAllReviews();
 });

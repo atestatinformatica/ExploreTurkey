@@ -1025,25 +1025,22 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     font-weight: 400;
     text-transform: capitalize;
 }
-/* Reguli generale */
-.footer-social {
-    text-align: right;
-}
-
+.footer-social {text-align: right;}
 .footer-social .fa-phone:before {
     position: relative;
     top: 2px;
 }
-
-.footer-social a,
-.footer-social span {
+.footer-social a ,.footer-social span {
     display: inline-block;
     color: #afb4bf;
     font-size: 14px;
     margin-left: 15px;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
     transition: .3s;
 }
-
 .footer-social a {
     width: 35px;
     height: 35px;
@@ -1052,41 +1049,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     text-align: center;
     border-radius: 50%;
 }
-
-.footer-social span {
-    margin-right: 15px;
-    margin-left: 0;
-    color: #a5adb3;
-}
-
-.footer-social span:hover {
-    color: #ff545a;
-}
-
-.footer-social a:hover {
-    background: #ff545a;
-    color: #fff;
-}
-
-/* ✅ Specific pentru telefon */
-.footer-social .phone a {
-    width: auto;
-    height: auto;
-    line-height: normal;
-    background: none;
-    border-radius: 0;
-    text-align: left;
-}
-
-.footer-social .phone a:hover {
-    background: none;
-    color: #ff545a;
-}
-
-.footer-social .phone i {
-    margin-right: 5px;
-}
-
+.footer-social span {margin-right:15px;margin-left: 0;color: #a5adb3;}
+.footer-social span:hover{color: #ff545a;}
+.footer-social a:hover {background:#ff545a;color: #fff;}
 
 /*===============================
     Scroll Top
@@ -1383,6 +1348,27 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .submit-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+}
+
+.testimonial-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.review-button {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.review-button:hover {
+  background-color: #0056b3;
 }
 
 

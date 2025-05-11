@@ -557,7 +557,7 @@
 				<p>What our clients say about Turkey!</p>
 			</div><!--/.section-header-->
 			<div class="reviews-content">
-    <div class="testimonial-carousel" id="all-reviews-container">
+   <div class="testimonial-carousel" id="all-reviews-container">
 				    <div class="single-testimonial-box">
 						<div class="testimonial-description">
 							<div class="testimonial-info">
@@ -795,15 +795,11 @@
  <button class="submit-button" onclick="submitReviewPopup()">Submit</button>
 
   </div>
- 
-
 </div>
-<div id="simple-review-list"></div>
 		</section><!--/.reviews-->
 		<!--reviews end -->
 		
-
-
+		
 
 
 
@@ -982,23 +978,32 @@
 						<div class="col-sm-7">
   <div class="footer-social">
 
-    <span><i class="fa fa-phone"> +1 (222) 777 8888</i>	</span>
+<span class="phone">
+  <a href="tel:+12227778888">
+    <i class="fa fa-phone"></i> +1 (222) 777 8888
+  </a>
+</span>
+
+
+
 	 <span style="font-size: 14px; color: #aaa; margin-right: 10px;">Share on:</span>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://exemplu.ro" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
 
-    <a href="https://twitter.com/intent/tweet?url=https://exemplu.ro&text=Vezi%20aceasta%20pagina!" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
+   <a href="https://www.facebook.com/sharer/sharer.php?u=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+  <i class="fa fa-facebook"></i>
+</a>
 
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://exemplu.ro" target="_blank">
-      <i class="fa fa-linkedin"></i>
-    </a>
+<a href="https://twitter.com/intent/tweet?url=https://atestatinformatica.github.io/ExploreTurkey/&text=Vezi%20aceasta%20pagina!" target="_blank">
+  <i class="fa fa-twitter"></i>
+</a>
 
-    <a href="https://api.whatsapp.com/send?text=https://exemplu.ro" target="_blank">
-      <i class="fa fa-whatsapp"></i>
-    </a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+  <i class="fa fa-linkedin"></i>
+</a>
+
+<a href="https://api.whatsapp.com/send?text=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+  <i class="fa fa-whatsapp"></i>
+</a>
+
   </div>
 </div>
 
@@ -1029,13 +1034,35 @@
 <!-- User Account Sidebar -->
 <div id="user-profile-panel" class="favorites-slide">
     <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
-    <div class="user-info">
-        <h3 class="favorites-title">Contul Meu</h3>
-        <p><strong>Username:</strong> <span id="profile-username"></span></p>
-        <p><strong>Email:</strong> <span id="profile-email"></span></p>
-        <p><strong>Parola:</strong> <span id="profile-password"></span></p>
+<div class="user-info">
+    <h3 class="favorites-title">Contul Meu</h3>
+    <p><strong>Username:</strong> <span id="profile-username"></span></p>
+    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+    <p><strong>Parola:</strong> <span id="profile-password"></span> 
+        <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
+    </p>
+
+    <div class="profile-picture-section">
+        <p><strong>Profile picture:</strong></p>
+        <img id="current-profile-image" src="assets/images/users/user-placeholder.jpg" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" alt="Profile">
+        <div id="profile-options">
+            <p>Choose another photo:</p>
+            <div class="profile-options-container">
+                <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
+				<img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
+            </div>
+        </div>
     </div>
+	<button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
+
 </div>
+
 
 
 <!-- Modal pentru hartă -->
@@ -1177,14 +1204,13 @@ function closeReviewPopup() {
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/reviews.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      renderAllReviews();
+  document.addEventListener("DOMContentLoaded", () => {
+    renderAllReviews();
   });
 </script>
 <div id="all-reviews-container" style="margin-top: 40px;">
   <!-- Review-urile vor fi afișate aici -->
 </div>
-
 
 
     </body>

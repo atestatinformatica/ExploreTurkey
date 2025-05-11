@@ -1,38 +1,11 @@
-// reviews.js
-
-// Inițializare Slick Carousel
-function initializeCarousel() {
-  $('.testimonial-carousel').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-}
-
-// Funcție pentru a adăuga recenzii dinamice
 function renderAllReviews() {
-  const container = document.querySelector('.testimonial-carousel');
-  if (!container) return;
+  const carousel = document.querySelector('.testimonial-carousel');
+  if (!carousel) return;
 
-  // Păstrează recenziile hardcodate existente
-  const hardcoded = Array.from(container.querySelectorAll('.single-testimonial-box'));
-  container.innerHTML = '';
-  hardcoded.forEach((box) => container.appendChild(box));
+  // 🔧 Eliminăm TOATE review-urile generate de utilizatori anterior (nu hardcodate)
+// 🔧 Eliminăm TOATE review-urile generate de utilizatori (cele cu clasa .user-review)
+carousel.querySelectorAll('.single-testimonial-box.user-review').forEach(el => el.remove());
+
 
   const cities = [
     'istanbul', 'ankara', 'izmir', 'antalya', 'bursa',
@@ -46,16 +19,23 @@ function renderAllReviews() {
     const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
 
     reviews.forEach((r) => {
-      const div = document.createElement('div');
-      div.className = 'single-testimonial-box';
+const div = document.createElement('div');
+div.className = 'single-testimonial-box user-review';
+div.dataset.email = r.email; // marchez emailul pentru update live
+
+
+
+	  div.className = 'single-testimonial-box user-review';
+div.setAttribute("data-email", r.email);
+
       div.innerHTML = `
         <div class="testimonial-description">
           <div class="testimonial-info">
             <div class="testimonial-img">
-              <img src="${r.photo || 'assets/images/clients/c7.png'}" alt="clients">
+              <img src="${(r.email === currentUser.email && localStorage.getItem(`profileImage_${r.email}`)) || r.photo || 'assets/images/clients/c7.png'}" alt="clients">
             </div>
             <div class="testimonial-person">
-              <h2>${r.name || r.email.split('@')[0]}</h2>
+              <h2>${r.username || r.name || r.email.split('@')[0]}</h2>
               <h4>${city.charAt(0).toUpperCase() + city.slice(1)}</h4>
               <div class="testimonial-person-star">
                 ${'<i class="fa fa-star"></i>'.repeat(r.rating)}
@@ -77,19 +57,38 @@ function renderAllReviews() {
           }
         </div>
       `;
-      container.appendChild(div);
+      carousel.appendChild(div);
     });
   });
 
-  // Reîmprospătează caruselul
-  if ($('.testimonial-carousel').hasClass('slick-initialized')) {
-    $('.testimonial-carousel').slick('unslick');
+  if ($(carousel).hasClass('slick-initialized')) {
+    $(carousel).slick('unslick');
   }
-  initializeCarousel();
-}
 
-// Apelare funcții la încărcarea paginii
-$(document).ready(function () {
-  initializeCarousel();
-  renderAllReviews();
-});
+  $(carousel).slick({
+    centerMode: true,
+    centerPadding: '60px',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '40px',
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '20px',
+        },
+      },
+    ],
+  });
+}

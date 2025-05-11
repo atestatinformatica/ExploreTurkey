@@ -6,6 +6,16 @@ let userProfileImage = "assets/images/users/user-placeholder.jpg";
 function login(email) {
     isLoggedIn = true;
     currentUserEmail = email;
+	const savedImage = localStorage.getItem(`profileImage_${email}`);
+if (savedImage) {
+    userProfileImage = savedImage;
+}
+const profileImgEl = document.getElementById("current-profile-image");
+if (profileImgEl && savedImage) {
+    profileImgEl.src = savedImage;
+}
+
+
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("loggedInEmail", email);
     favorites = JSON.parse(localStorage.getItem(`favorites_${email}`)) || [];
@@ -42,6 +52,8 @@ if (pendingReview) {
             localStorage.removeItem("preLoginScroll");
         }, 300);
     }
+	renderAllReviews();
+
 }
 
 function logout() {
@@ -167,15 +179,14 @@ function updateNavbar() {
     const nav = document.querySelector(".nav.navbar-nav.navbar-right");
     if (!nav.querySelector('.user-logged-in')) {
         nav.innerHTML += `
-            <li class="scroll user-logged-in"><a href="#" onclick="event.preventDefault(); toggleFavoritesPanel()">My Favorites</a></li>
-            <li class="scroll user-logged-in"><a href="#" onclick="logout()">Logout</a></li>
-            <li class="user-logged-in">
-    <a href="#" onclick="event.preventDefault(); toggleUserProfilePanel()">
-        <img src="${userProfileImage}" alt="Profile" style="width:32px; height:32px; border-radius:50%;">
-    </a>
-</li>
+    <li class="scroll user-logged-in"><a href="#" onclick="event.preventDefault(); toggleFavoritesPanel()">My Favorites</a></li>
+    <li class="user-logged-in">
+        <a href="#" onclick="event.preventDefault(); toggleUserProfilePanel()">
+            <img src="${userProfileImage}" alt="Profile" style="width:40px; height:40px; border-radius:50%;">
+        </a>
+    </li>
+`;
 
-        `;
     }
 }
 
@@ -236,6 +247,16 @@ document.addEventListener("DOMContentLoaded", () => {
         isLoggedIn = true;
         currentUserEmail = localStorage.getItem("loggedInEmail") || "";
         favorites = JSON.parse(localStorage.getItem(`favorites_${currentUserEmail}`)) || [];
+		const savedImg = localStorage.getItem(`profileImage_${currentUserEmail}`);
+if (savedImg) {
+    userProfileImage = savedImg;
+}
+const profileImgEl = document.getElementById("current-profile-image");
+if (profileImgEl && savedImg) {
+    profileImgEl.src = savedImg;
+}
+
+
         updateNavbar();
 
         setTimeout(() => {
@@ -307,17 +328,35 @@ function submitReviewPopup() {
         return;
     }
 
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const currentUser = users.find(u => u.email === currentUserEmail);
+    const username = currentUser ? currentUser.username : currentUserEmail.split('@')[0];
+
     const key = `reviews_${city}`;
     let reviews = JSON.parse(localStorage.getItem(key)) || [];
 
-    reviews = reviews.filter(r => r.email !== currentUserEmail);
-    reviews.push({ email: currentUserEmail, text, rating });
+const already = reviews.find(r => r.email === currentUserEmail);
+if (already) return showMessage("You already left a review for this city.");
+
+const savedPhoto = localStorage.getItem(`profileImage_${currentUserEmail}`) || 'assets/images/clients/c7.png';
+
+reviews.push({
+  email: currentUserEmail,
+  username,
+  text,
+  rating,
+  photo: savedPhoto
+});
+
 
     localStorage.setItem(key, JSON.stringify(reviews));
     popup.classList.add("hidden");
-    renderAllReviews?.();  // dacă ai o funcție de refresh
-    showMessage("Thank you for your review!");
+
+    showMessage("Thank you for your review!"); // <- aici înainte
+    renderAllReviews(); // <- abia acum reafișăm toate
 }
+
+
 
 function toggleUserProfilePanel() {
     const panel = document.getElementById("user-profile-panel");
@@ -331,9 +370,88 @@ function toggleUserProfilePanel() {
         if (currentUser) {
             document.getElementById("profile-username").textContent = currentUser.username;
             document.getElementById("profile-email").textContent = currentUser.email;
-            document.getElementById("profile-password").textContent = currentUser.password;
+            const passwordSpan = document.getElementById("profile-password");
+passwordSpan.textContent = "●".repeat(currentUser.password.length);
+passwordSpan.dataset.original = currentUser.password;
+passwordSpan.dataset.visible = "false";
+
         }
     }
 }
+document.getElementById("toggle-password-visibility").addEventListener("click", () => {
+    const passwordSpan = document.getElementById("profile-password");
+    const isVisible = passwordSpan.dataset.visible === "true";
 
+    if (isVisible) {
+        // ascunde
+        passwordSpan.textContent = "●".repeat(passwordSpan.dataset.original.length);
+        passwordSpan.dataset.visible = "false";
+    } else {
+        // arată
+        passwordSpan.textContent = passwordSpan.dataset.original;
+        passwordSpan.dataset.visible = "true";
+    }
+});
+
+
+function selectProfileImage(newSrc) {
+  userProfileImage = newSrc;
+  localStorage.setItem(`profileImage_${currentUserEmail}`, newSrc);
+
+  // Navbar + profil
+  const profileImgEl = document.getElementById("current-profile-image");
+  if (profileImgEl) profileImgEl.src = newSrc;
+  document.querySelectorAll('.nav.navbar-nav.navbar-right img').forEach(img => {
+    img.src = newSrc;
+  });
+
+  // Update în localStorage
+  const cities = [
+    'istanbul', 'ankara', 'izmir', 'antalya', 'bursa',
+    'adana', 'gaziantep', 'konya', 'trabzon', 'kayseri',
+    'mardin', 'sanliurfa', 'cappadocia', 'pamukkale',
+  ];
+
+  cities.forEach(city => {
+    const key = `reviews_${city}`;
+    let reviews = JSON.parse(localStorage.getItem(key)) || [];
+
+    const index = reviews.findIndex(r => r.email === currentUserEmail);
+    if (index !== -1) {
+      reviews[index].photo = newSrc;
+      localStorage.setItem(key, JSON.stringify(reviews));
+    }
+  });
+
+  // 🔄 Update doar recenziile din DOM (live)
+  document.querySelectorAll('.single-testimonial-box.user-review').forEach(box => {
+    if (box.dataset.email === currentUserEmail) {
+      const img = box.querySelector('.testimonial-img img');
+      if (img) img.src = newSrc;
+    }
+  });
+}
+
+
+
+
+
+// Modifică funcția toggleUserProfilePanel să includă:
+if (currentUser) {
+    document.getElementById("profile-username").textContent = currentUser.username;
+    document.getElementById("profile-email").textContent = currentUser.email;
+    document.getElementById("profile-password").textContent = "*".repeat(currentUser.password.length);
+    document.getElementById("profile-password").dataset.original = currentUser.password;
+    document.getElementById("profile-password").dataset.visible = "false";
+
+   const savedImage = localStorage.getItem(`profileImage_${currentUserEmail}`);
+if (savedImage) {
+    userProfileImage = savedImage;
+    const profileImgEl = document.getElementById("current-profile-image");
+    if (profileImgEl) {
+        profileImgEl.src = savedImage;
+    }
+}
+
+}
 

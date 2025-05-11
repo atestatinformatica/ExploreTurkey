@@ -96,3 +96,24 @@
 .clear-favorites-btn:hover {
   background-color: #e14b50;
 }
+
+/*schimbarea pozei de profil pt slider MY ACCOUNT*/
+.profile-picture-section {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.profile-options-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.profile-options-container img:hover {
+  transform: scale(1.1);
+  border-color: #ff5a5f;
+}

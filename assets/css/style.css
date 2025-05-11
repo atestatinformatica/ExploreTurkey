@@ -1052,6 +1052,25 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .footer-social span {margin-right:15px;margin-left: 0;color: #a5adb3;}
 .footer-social span:hover{color: #ff545a;}
 .footer-social a:hover {background:#ff545a;color: #fff;}
+/* ✅ Specific pentru telefon */
+.footer-social .phone a {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    background: none;
+    border-radius: 0;
+    text-align: left;
+}
+
+.footer-social .phone a:hover {
+    background: none;
+    color: #ff545a;
+}
+
+.footer-social .phone i {
+    margin-right: 5px;
+}
+
 
 /*===============================
     Scroll Top

@@ -816,7 +816,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .review-button:hover {
   background-color: #0056b3;
 }
-.review-card {
+.single-testimonial-box.user-review {
   width: 300px; /* sau auto pentru responsive */
   height: 250px; /* înălțime fixă pentru uniformitate */
   padding: 20px;

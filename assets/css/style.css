@@ -816,7 +816,25 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .review-button:hover {
   background-color: #0056b3;
 }
+.review-card {
+  width: 300px; /* sau auto pentru responsive */
+  height: 250px; /* înălțime fixă pentru uniformitate */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 8px;
+}
 
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
 
 /*-------------------------------------       

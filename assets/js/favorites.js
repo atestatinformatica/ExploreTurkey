@@ -1,7 +1,7 @@
 let isLoggedIn = false;
 let favorites = [];
 let currentUserEmail = "";
-let userProfileImage = "assets/images/users/user-placeholder.jpg";
+let userProfileImage = "assets/images/users/user.png";
 
 function login(email) {
     isLoggedIn = true;
@@ -142,7 +142,7 @@ function refreshFavoritesPanel() {
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="explore-person-img">
-                                            <a href="#"><img src="assets/images/users/user-placeholder.jpg" alt="User"></a>
+                                            <a href="#"><img src="assets/images/users/user.png" alt="User"></a>
                                         </div>
                                     </div>
                                     <div class="col-sm-10">
@@ -318,44 +318,42 @@ function openReviewPopup() {
 
 
 function submitReviewPopup() {
-    const popup = document.getElementById("review-popup");
-    const city = document.getElementById("review-city").value.trim();
-    const rating = popup.querySelectorAll(".star-rating .selected").length;
-    const text = popup.querySelector("textarea").value.trim();
+  const popup = document.getElementById("review-popup");
+  const city = document.getElementById("review-city").value.trim();
+  const rating = popup.querySelectorAll(".star-rating .selected").length;
+  const text = popup.querySelector("textarea").value.trim();
 
-    if (!city || !text || rating === 0) {
-        showMessage("Please select a city, add a comment and a rating.");
-        return;
-    }
+  if (!city || !text || rating === 0) {
+    showMessage("Please select a city, add a comment and a rating.");
+    return;
+  }
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const currentUser = users.find(u => u.email === currentUserEmail);
-    const username = currentUser ? currentUser.username : currentUserEmail.split('@')[0];
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const currentUser = users.find(u => u.email === currentUserEmail);
+  const username = currentUser ? currentUser.username : currentUserEmail.split('@')[0];
 
-    const key = `reviews_${city}`;
-    let reviews = JSON.parse(localStorage.getItem(key)) || [];
+  const key = `reviews_${city}`;
+  let reviews = JSON.parse(localStorage.getItem(key)) || [];
 
-const already = reviews.find(r => r.email === currentUserEmail);
-if (already) return showMessage("You already left a review for this city.");
+  const already = reviews.find(r => r.email === currentUserEmail);
+  if (already) return showMessage("You already left a review for this city.");
 
-const savedPhoto = localStorage.getItem(`profileImage_${currentUserEmail}`) || 'assets/images/clients/c7.png';
+  const savedPhoto = localStorage.getItem(`profileImage_${currentUserEmail}`) || 'assets/images/users/user.png';
 
-reviews.push({
-  email: currentUserEmail,
-  username,
-  text,
-  rating,
-  photo: savedPhoto
-});
+  reviews.push({
+    email: currentUserEmail,
+    username,
+    text,
+    rating,
+    photo: savedPhoto
+  });
 
+  localStorage.setItem(key, JSON.stringify(reviews));
+  popup.classList.add("hidden");
 
-    localStorage.setItem(key, JSON.stringify(reviews));
-    popup.classList.add("hidden");
-
-    showMessage("Thank you for your review!"); // <- aici înainte
-    renderAllReviews(); // <- abia acum reafișăm toate
+  showMessage("Thank you for your review!");
+  renderAllReviews(); // Reafișează toate recenziile
 }
-
 
 
 function toggleUserProfilePanel() {

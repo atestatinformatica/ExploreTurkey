@@ -2,10 +2,8 @@ function renderAllReviews() {
   const carousel = document.querySelector('.testimonial-carousel');
   if (!carousel) return;
 
-  // 🔧 Eliminăm TOATE review-urile generate de utilizatori anterior (nu hardcodate)
-// 🔧 Eliminăm TOATE review-urile generate de utilizatori (cele cu clasa .user-review)
-carousel.querySelectorAll('.single-testimonial-box.user-review').forEach(el => el.remove());
-
+  // Eliminăm toate recenziile existente
+  carousel.innerHTML = '';
 
   const cities = [
     'istanbul', 'ankara', 'izmir', 'antalya', 'bursa',
@@ -19,14 +17,9 @@ carousel.querySelectorAll('.single-testimonial-box.user-review').forEach(el => e
     const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
 
     reviews.forEach((r) => {
-const div = document.createElement('div');
-div.className = 'single-testimonial-box user-review';
-div.dataset.email = r.email; // marchez emailul pentru update live
-
-
-
-	  div.className = 'single-testimonial-box user-review';
-div.setAttribute("data-email", r.email);
+      const div = document.createElement('div');
+      div.className = 'single-testimonial-box user-review';
+      div.dataset.email = r.email;
 
       div.innerHTML = `
         <div class="testimonial-description">
@@ -61,6 +54,7 @@ div.setAttribute("data-email", r.email);
     });
   });
 
+  // Reinitializează slider-ul dacă este necesar
   if ($(carousel).hasClass('slick-initialized')) {
     $(carousel).slick('unslick');
   }
@@ -92,3 +86,4 @@ div.setAttribute("data-email", r.email);
     ],
   });
 }
+

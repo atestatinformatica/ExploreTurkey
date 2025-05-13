@@ -635,13 +635,35 @@
 </div>
 <!-- User Account Sidebar -->
 <div id="user-profile-panel" class="favorites-slide">
-    <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
-    <div class="user-info">
-        <h3 class="favorites-title">Contul Meu</h3>
-        <p><strong>Username:</strong> <span id="profile-username"></span></p>
-        <p><strong>Email:</strong> <span id="profile-email"></span></p>
-        <p><strong>Parola:</strong> <span id="profile-password"></span></p>
+  <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
+  <div class="user-info">
+    <h3 class="favorites-title">Contul Meu</h3>
+    <p><strong>Username:</strong> <span id="profile-username"></span></p>
+    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+    <p><strong>Parola:</strong> <span id="profile-password"></span>
+      <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
+    </p>
+
+    <div class="profile-picture-section">
+      <p><strong>Profile picture:</strong></p>
+      <img id="current-profile-image" src="assets/images/users/user.png" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" alt="Profile">
+      <div id="profile-options">
+        <p>Choose another photo:</p>
+        <div class="profile-options-container">
+          <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
+        </div>
+      </div>
     </div>
+
+    <button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
+  </div>
 </div>
 
 

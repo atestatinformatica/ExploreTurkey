@@ -775,19 +775,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .hidden {
   display: none;
 }
-.review-button {
-  background-color: #007bff; /* Albastru vibrant */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-}
+
 
 .review-button:hover {
   background-color: #0056b3; /* Nuanta mai închisă la hover */
@@ -799,23 +787,12 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
   margin: 30px 0;
 }
 
-.review-button {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  min-width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-}
 
 .review-button:hover {
   background-color: #0056b3;
 }
+
+
 
 
 /*-------------------------------------       

@@ -1,9 +1,14 @@
+let reviewsRendered = false;
+
 function renderAllReviews() {
+  if (reviewsRendered) return;
+  reviewsRendered = true;
+
   const carousel = document.querySelector('.testimonial-carousel');
   if (!carousel) return;
 
-  // Eliminăm toate recenziile existente
-  carousel.innerHTML = '';
+  // ⛔️ curățăm DOAR review-urile generate de utilizator
+  carousel.querySelectorAll('.user-review').forEach(el => el.remove());
 
   const cities = [
     'istanbul', 'ankara', 'izmir', 'antalya', 'bursa',
@@ -11,12 +16,19 @@ function renderAllReviews() {
     'mardin', 'sanliurfa', 'cappadocia', 'pamukkale',
   ];
 
-  const currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+  const users = JSON.parse(localStorage.getItem('users') || '[]');
+  const currentUser = users.find(u => u.email === currentUserEmail) || {};
 
-  cities.forEach((city) => {
+  cities.forEach(city => {
     const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
 
-    reviews.forEach((r) => {
+    reviews.forEach(r => {
+      // verificăm dacă review-ul există deja (după email + city)
+      const duplicate = Array.from(carousel.children).some(el =>
+        el.dataset.email === r.email && el.querySelector('h4')?.innerText.toLowerCase() === city
+      );
+      if (duplicate) return;
+
       const div = document.createElement('div');
       div.className = 'single-testimonial-box user-review';
       div.dataset.email = r.email;
@@ -25,10 +37,10 @@ function renderAllReviews() {
         <div class="testimonial-description">
           <div class="testimonial-info">
             <div class="testimonial-img">
-              <img src="${(r.email === currentUser.email && localStorage.getItem(`profileImage_${r.email}`)) || r.photo || 'assets/images/clients/c7.png'}" alt="clients">
+              <img src="${r.photo || 'assets/images/users/user.png'}" alt="client">
             </div>
             <div class="testimonial-person">
-              <h2>${r.username || r.name || r.email.split('@')[0]}</h2>
+              <h2>${r.username || r.email.split('@')[0]}</h2>
               <h4>${city.charAt(0).toUpperCase() + city.slice(1)}</h4>
               <div class="testimonial-person-star">
                 ${'<i class="fa fa-star"></i>'.repeat(r.rating)}
@@ -39,22 +51,16 @@ function renderAllReviews() {
           <div class="testimonial-comment">
             <p>"${r.text}"</p>
           </div>
-          ${
-            r.email === currentUser.email
-              ? `
+          ${r.email === currentUserEmail ? `
             <div class="testimonial-controls">
-              <button onclick="editReview('${city}', '${r.email}')" class="review-button">Edit</button>
-              <button onclick="deleteReview('${city}', '${r.email}')" class="review-button" style="background-color:#dc3545;">Delete</button>
-            </div>`
-              : ''
-          }
+             <button onclick="deleteReview('${city}', '${r.email}')" class="review-button" style="background-color:#dc3545;">Delete</button>
+            </div>` : ''}
         </div>
       `;
       carousel.appendChild(div);
     });
   });
 
-  // Reinitializează slider-ul dacă este necesar
   if ($(carousel).hasClass('slick-initialized')) {
     $(carousel).slick('unslick');
   }
@@ -69,21 +75,25 @@ function renderAllReviews() {
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: '40px',
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: '20px',
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: '40px' } },
+      { breakpoint: 600, settings: { slidesToShow: 1, centerPadding: '20px' } }
     ],
   });
 }
 
+function deleteReview(city, email) {
+  if (!confirm("Are you sure you want to delete this review?")) return;
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews = reviews.filter(r => r.email !== email);
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  // resetăm complet randarea
+  reviewsRendered = false;
+  const carousel = document.querySelector('.testimonial-carousel');
+  if (carousel && $(carousel).hasClass('slick-initialized')) {
+    $(carousel).slick('unslick'); // închidem slick
+  }
+  renderAllReviews();
+  showMessage("Your review has been deleted.");
+}

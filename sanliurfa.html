@@ -52,30 +52,7 @@
 <link rel="stylesheet" href="assets/css/favorites-style.css"></head>
 
 <body>
-<!-- header-top start -->
-<header id="header-top" class="header-top">
-    <ul>
-        <li>
-            <div class="header-top-left">
-                <ul>
-                    <li class="select-opt">
-                        <select name="language" id="language">
-                            <option value="default">EN</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <select name="currency" id="currency">
-                            <option value="usd">USD</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</header>
+
 
 <!-- Navigation Start -->
 <section class="top-area">
@@ -326,130 +303,110 @@
 
 		<!--reviews start -->
 <section id="reviews" class="reviews">
-	<div class="section-header">
-		<h2>clients reviews</h2>
-		<p>What our clients say about Sanliurfa!</p>
-	</div>
-	<div class="reviews-content">
-		<div class="testimonial-carousel">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our clients say about Sanliurfa!</p>
+  </div>
+  <div class="reviews-content">
+    <div id="all-reviews-container" class="review-list">
 
-			<!-- Review 1 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c1.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Ali Demir</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Gölbaşı Parkı'ndaki kutsal balıkları beslemek ve tarihi sokaklarda kaybolmak unutulmazdı!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c1.png" alt="Ali Demir">
+          <div class="review-info">
+            <h3>Ali Demir</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Gölbaşı Parkı'ndaki kutsal balıkları beslemek ve tarihi sokaklarda kaybolmak unutulmazdı!"</p>
+      </div>
 
-			<!-- Review 2 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c2.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Sophie Müller</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Balıklıgöl’deki atmosfer büyüleyici. Tarih ve doğa mükemmel birleşmiş!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c2.png" alt="Sophie Müller">
+          <div class="review-info">
+            <h3>Sophie Müller</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"Balıklıgöl’deki atmosfer büyüleyici. Tarih ve doğa mükemmel birleşmiş!"</p>
+      </div>
 
-			<!-- Review 3 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c3.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Mehmet Yıldız</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Göbeklitepe'yi görmeden dönmeyin. Tarihin sıfır noktasında hissetmek inanılmaz."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c3.png" alt="Mehmet Yıldız">
+          <div class="review-info">
+            <h3>Mehmet Yıldız</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Göbeklitepe'yi görmeden dönmeyin. Tarihin sıfır noktasında hissetmek inanılmaz."</p>
+      </div>
 
-			<!-- Review 4 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c4.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Elena Petrova</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Kale manzarası harika ama restorasyon nedeniyle içeri giremedik. Yine de fotoğraflar muhteşem!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c4.png" alt="Elena Petrova">
+          <div class="review-info">
+            <h3>Elena Petrova</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★☆☆</div>
+        </div>
+        <p class="review-text">"Kale manzarası harika ama restorasyon nedeniyle içeri giremedik. Yine de fotoğraflar muhteşem!"</p>
+      </div>
 
-			<!-- Review 5 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c5.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Fatma Kaya</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Çarşıdaki baharat kokuları ve otantik dükkanlar büyüleyici. Şanlıurfa mutfağı efsane!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c5.png" alt="Fatma Kaya">
+          <div class="review-info">
+            <h3>Fatma Kaya</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Çarşıdaki baharat kokuları ve otantik dükkanlar büyüleyici. Şanlıurfa mutfağı efsane!"</p>
+      </div>
 
-			<!-- Review 6 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c6.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Carlos Mendoza</h2>
-							<h4>Sanliurfa</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"El parque Gölbaşı es un oasis. ¡Las leyendas de los peces sagrados hacen todo más mágico!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c6.png" alt="Carlos Mendoza">
+          <div class="review-info">
+            <h3>Carlos Mendoza</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"El parque Gölbaşı es un oasis. ¡Las leyendas de los peces sagrados hacen todo más mágico!"</p>
+      </div>
 
-		</div>
-	</div>
+    </div>
+
+    <p style="margin-top: 10px;">
+      <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
+        Read all reviews <span id="toggle-arrow">&#x25BC;</span>
+      </a>
+    </p>
+  </div>
+
+  <section class="review-section">
+    <h3>Reviews by City</h3>
+    <button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
+
+    <div id="review-popup" class="hidden review-popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeReviewPopup()">&times;</span>
+        <h3>Leave a Review</h3>
+        <div class="star-rating" id="star-rating"></div>
+        <textarea placeholder="Your review..."></textarea>
+        <button class="submit-button" onclick="submitReviewSanliurfa()">Submit</button>
+      </div>
+    </div>
+  </section>
 </section>
+
 		<!--reviews end -->
 		<!--blog start -->
 <section id="blog" class="blog">
@@ -791,6 +748,119 @@ function closeMap() {
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/locations.js"></script>
 <script src="assets/js/favorites.js"></script>
+<script src="assets/js/reviews.js"></script>
+<script>
+let reviewsVisible = false;
+
+function toggleReviews() {
+  reviewsVisible = !reviewsVisible;
+  applyReviewHidingLogic();
+   if (!reviewsVisible) {
+    // Scroll la secțiunea "reviews"
+    document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+  }
+  
+}
+</script>
+<script>
+function renderSanliurfaReviews() {
+  const container = document.getElementById("all-reviews-container");
+  if (!container) return;
+
+  container.querySelectorAll(".user-review").forEach(el => el.remove());
+
+  const city = "sanliurfa";
+  const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+
+  const userReviews = [];
+  const otherReviews = [];
+
+  reviews.forEach(r => {
+    const stars = "★".repeat(r.rating);
+    const canDelete = (r.email === currentUserEmail);
+
+    const reviewHTML = `
+      <div class="review-card user-review" data-email="${r.email}">
+        <div class="review-header">
+          <img src="${r.photo}" alt="${r.username}">
+          <div class="review-info">
+            <h3>${r.username}</h3>
+            <p class="review-location">Sanliurfa</p>
+          </div>
+          <div class="review-rating">${stars}</div>
+        </div>
+        <p class="review-text">"${r.text}"</p>
+        ${canDelete ? `<button onclick="deleteSanliurfaReview()" class="review-delete-btn">Delete</button>` : ""}
+      </div>
+    `;
+
+    if (canDelete) {
+      userReviews.unshift(reviewHTML);
+    } else {
+      otherReviews.push(reviewHTML);
+    }
+  });
+
+  userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+  otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
+
+  applyReviewHidingLogic();
+}
+</script>
+
+<script>
+function deleteSanliurfaReview() {
+  const city = "sanliurfa";
+  const confirmDelete = confirm("Are you sure you want to delete your review?");
+  if (!confirmDelete) return;
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews = reviews.filter(r => r.email !== currentUserEmail);
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  const container = document.getElementById("all-reviews-container");
+  const userReviewForCity = Array.from(container.querySelectorAll(`.user-review[data-email="${currentUserEmail}"]`))
+    .find(div => div.querySelector(".review-location")?.textContent?.toLowerCase() === city);
+  if (userReviewForCity) userReviewForCity.remove();
+
+  showMessage("Review deleted.");
+  applyReviewHidingLogic();
+}
+
+function submitReviewSanliurfa() {
+  const city = "sanliurfa";
+  const rating = document.querySelectorAll(".star-rating .selected").length;
+  const text = document.querySelector("#review-popup textarea").value.trim();
+
+  if (!text || rating === 0) {
+    showMessage("Please add a comment and a rating.");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.email === currentUserEmail);
+  const username = user?.username || currentUserEmail.split("@")[0];
+  const photo = localStorage.getItem(`profileImage_${currentUserEmail}`) || "assets/images/users/user.png";
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews.push({ email: currentUserEmail, username, text, rating, photo });
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  document.getElementById("review-popup").classList.add("hidden");
+  showMessage("Thank you for your review!");
+
+  setTimeout(() => {
+    renderSanliurfaReviews();
+  }, 50);
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderSanliurfaReviews();
+  });
+</script>
+
 
         
         <!--modernizr.min.js-->

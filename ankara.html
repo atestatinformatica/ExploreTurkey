@@ -53,30 +53,6 @@
 <link rel="stylesheet" href="assets/css/favorites-style.css"></head>
 
 <body>
-<!-- header-top start -->
-<header id="header-top" class="header-top">
-    <ul>
-        <li>
-            <div class="header-top-left">
-                <ul>
-                    <li class="select-opt">
-                        <select name="language" id="language">
-                            <option value="default">EN</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <select name="currency" id="currency">
-                            <option value="usd">USD</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</header>
 
 <!-- Navigation Start -->
 <section class="top-area">
@@ -313,128 +289,111 @@
     <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
-		<!--reviews start -->
-<section id="reviews" class="reviews">
-	<div class="section-header">
-		<h2>clients reviews</h2>
-		<p>What our clients say about Ankara!</p>
-	</div>
-	<div class="reviews-content">
-		<div class="testimonial-carousel">
+	<section id="reviews" class="reviews">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our clients say about Ankara!</p>
+  </div>
+  <div class="reviews-content">
+    <div id="all-reviews-container" class="review-list">
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c1.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Ali Demir</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Anıtkabir is a must-visit. The city has a calm, organized feel and excellent museums."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c1.png" alt="Ali Demir">
+          <div class="review-info">
+            <h3>Ali Demir</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Anıtkabir is a must-visit. The city has a calm, organized feel and excellent museums."</p>
+      </div>
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c2.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Sarah Thompson</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Clean, modern and full of history. Loved the Rahmi Koç Museum!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c2.png" alt="Sarah Thompson">
+          <div class="review-info">
+            <h3>Sarah Thompson</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"Clean, modern and full of history. Loved the Rahmi Koç Museum!"</p>
+      </div>
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c3.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Mehmet Öztürk</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Başkent atmosferi, modern cafenele și cartiere curate. Super liniștit!"</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c3.png" alt="Mehmet Öztürk">
+          <div class="review-info">
+            <h3>Mehmet Öztürk</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Başkent atmosferi, modern cafenele și cartiere curate. Super liniștit!"</p>
+      </div>
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c4.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Lina Varga</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"I liked the mix between new buildings and historical places. Great local food too."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c4.png" alt="Lina Varga">
+          <div class="review-info">
+            <h3>Lina Varga</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"I liked the mix between new buildings and historical places. Great local food too."</p>
+      </div>
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c5.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Ahmad Saeed</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Public transport is excellent. Quiet, elegant city with soul."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c5.png" alt="Ahmad Saeed">
+          <div class="review-info">
+            <h3>Ahmad Saeed</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Public transport is excellent. Quiet, elegant city with soul."</p>
+      </div>
 
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c6.png" alt="clients"></div>
-						<div class="testimonial-person">
-							<h2>Daria Novak</h2>
-							<h4>Ankara</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Not as crowded as Istanbul, which I loved. Great place for families and couples."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c6.png" alt="Daria Novak">
+          <div class="review-info">
+            <h3>Daria Novak</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">★★★☆☆</div>
+        </div>
+        <p class="review-text">"Not as crowded as Istanbul, which I loved. Great place for families and couples."</p>
+      </div>
 
-		</div><!--/.testimonial-carousel-->
-	</div><!--/.reviews-content-->
+    </div>
+
+    <p style="margin-top: 10px;">
+      <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
+        Read all reviews <span id="toggle-arrow">&#x25BC;</span>
+      </a>
+    </p>
+  </div>
+
+  <section class="review-section">
+    <h3>Reviews by City</h3>
+    <button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
+
+    <div id="review-popup" class="hidden review-popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeReviewPopup()">&times;</span>
+        <h3>Leave a Review</h3>
+        <div class="star-rating" id="star-rating"></div>
+        <textarea placeholder="Your review..."></textarea>
+        <button class="submit-button" onclick="submitReviewAnkara()">Submit</button>
+      </div>
+    </div>
+  </section>
 </section>
-<!--/.reviews-->
-		<!--reviews end -->
+
 		<!--blog start -->
 		<section id="blog" class="blog">
 	<div class="container">
@@ -775,6 +734,120 @@ function closeMap() {
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/locations.js"></script>
 <script src="assets/js/favorites.js"></script>
+<script src="assets/js/favorites.js"></script>
+<script src="assets/js/reviews.js"></script>
+<script>
+let reviewsVisible = false;
+
+function toggleReviews() {
+  reviewsVisible = !reviewsVisible;
+  applyReviewHidingLogic();
+   if (!reviewsVisible) {
+    // Scroll la secțiunea "reviews"
+    document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+  }
+  
+}
+</script>
+<script>
+function renderAnkaraReviews() {
+  const container = document.getElementById("all-reviews-container");
+  if (!container) return;
+
+  container.querySelectorAll(".user-review").forEach(el => el.remove());
+
+  const city = "ankara";
+  const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+
+  const userReviews = [];
+  const otherReviews = [];
+
+  reviews.forEach(r => {
+    const stars = "★".repeat(r.rating);
+    const canDelete = (r.email === currentUserEmail);
+
+    const reviewHTML = `
+      <div class="review-card user-review" data-email="${r.email}">
+        <div class="review-header">
+          <img src="${r.photo}" alt="${r.username}">
+          <div class="review-info">
+            <h3>${r.username}</h3>
+            <p class="review-location">Ankara</p>
+          </div>
+          <div class="review-rating">${stars}</div>
+        </div>
+        <p class="review-text">"${r.text}"</p>
+        ${canDelete ? `<button onclick="deleteAnkaraReview()" class="review-delete-btn">Delete</button>` : ""}
+      </div>
+    `;
+
+    if (canDelete) {
+      userReviews.unshift(reviewHTML);
+    } else {
+      otherReviews.push(reviewHTML);
+    }
+  });
+
+  userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+  otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
+
+  applyReviewHidingLogic();
+}
+</script>
+
+<script>
+function deleteAnkaraReview() {
+  const city = "ankara";
+  const confirmDelete = confirm("Are you sure you want to delete your review?");
+  if (!confirmDelete) return;
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews = reviews.filter(r => r.email !== currentUserEmail);
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  const container = document.getElementById("all-reviews-container");
+  const userReviewForCity = Array.from(container.querySelectorAll(`.user-review[data-email="${currentUserEmail}"]`))
+    .find(div => div.querySelector(".review-location")?.textContent?.toLowerCase() === city);
+  if (userReviewForCity) userReviewForCity.remove();
+
+  showMessage("Review deleted.");
+  applyReviewHidingLogic();
+}
+
+function submitReviewAnkara() {
+  const city = "ankara";
+  const rating = document.querySelectorAll(".star-rating .selected").length;
+  const text = document.querySelector("#review-popup textarea").value.trim();
+
+  if (!text || rating === 0) {
+    showMessage("Please add a comment and a rating.");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.email === currentUserEmail);
+  const username = user?.username || currentUserEmail.split("@")[0];
+  const photo = localStorage.getItem(`profileImage_${currentUserEmail}`) || "assets/images/users/user.png";
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews.push({ email: currentUserEmail, username, text, rating, photo });
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  document.getElementById("review-popup").classList.add("hidden");
+  showMessage("Thank you for your review!");
+
+  setTimeout(() => {
+    renderAnkaraReviews();
+  }, 50);
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderAnkaraReviews();
+  });
+</script>
+
 
         
         <!--modernizr.min.js-->

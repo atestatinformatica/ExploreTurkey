@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- CSS -->
+	<link rel="stylesheet" href="assets/css/favorites-style.css">
    <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
        
@@ -51,31 +52,6 @@
         <![endif]-->
 
 <body>
-<!-- header-top start -->
-<header id="header-top" class="header-top">
-    <ul>
-        <li>
-            <div class="header-top-left">
-                <ul>
-                    <li class="select-opt">
-                        <select name="language" id="language">
-                            <option value="default">EN</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <select name="currency" id="currency">
-                            <option value="usd">USD</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</header>
-
 <!-- Navigation Start -->
 <section class="top-area">
     <div class="header-area">
@@ -326,131 +302,118 @@
 
 		<!--reviews start -->
 <section id="reviews" class="reviews">
-	<div class="section-header">
-		<h2>clients reviews</h2>
-		<p>What our clients say about Adana!</p>
-	</div>
-	<div class="reviews-content">
-		<div class="testimonial-carousel">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our clients say about Adana!</p>
+  </div><!--/.section-header-->
 
-			<!-- Review 1 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c1.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Burak Şahin</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Adana kebap here is the real deal. You haven’t tasted meat until you’ve been here!"</p>
-					</div>
-				</div>
-			</div>
+  <div class="reviews-content">
+    <div id="all-reviews-container" class="review-list">
 
-			<!-- Review 2 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c2.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Julia Becker</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"The river and parks were such a surprise. Beautiful places to walk and relax."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c1.png" alt="Burak Şahin">
+          <div class="review-info">
+            <h3>Burak Şahin</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Adana kebap here is the real deal. You haven’t tasted meat until you’ve been here!"</p>
+      </div>
 
-			<!-- Review 3 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c3.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Ahmed Al-Saleh</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Very hot in summer, but the people are incredibly warm and welcoming."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c2.png" alt="Julia Becker">
+          <div class="review-info">
+            <h3>Julia Becker</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"The river and parks were such a surprise. Beautiful places to walk and relax."</p>
+      </div>
 
-			<!-- Review 4 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c4.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Melisa Güler</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Merkez Park is stunning. The mosque near the river is a breathtaking landmark."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c3.png" alt="Ahmed Al-Saleh">
+          <div class="review-info">
+            <h3>Ahmed Al-Saleh</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★☆☆</div>
+        </div>
+        <p class="review-text">"Very hot in summer, but the people are incredibly warm and welcoming."</p>
+      </div>
 
-			<!-- Review 5 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c5.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Karim Dabbour</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Amazing food, great vibes, and very affordable compared to other cities."</p>
-					</div>
-				</div>
-			</div>
+      <!-- Recenzii ascunse inițial -->
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c4.png" alt="Melisa Güler">
+          <div class="review-info">
+            <h3>Melisa Güler</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Merkez Park is stunning. The mosque near the river is a breathtaking landmark."</p>
+      </div>
 
-			<!-- Review 6 -->
-			<div class="single-testimonial-box">
-				<div class="testimonial-description">
-					<div class="testimonial-info">
-						<div class="testimonial-img"><img src="assets/images/clients/c6.png" alt="client"></div>
-						<div class="testimonial-person">
-							<h2>Ioana Petrescu</h2>
-							<h4>Adana</h4>
-							<div class="testimonial-person-star">
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-							</div>
-						</div>
-					</div>
-					<div class="testimonial-comment">
-						<p>"Oraș viu și autentic, cu mâncare excelentă și localnici primitori."</p>
-					</div>
-				</div>
-			</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c5.png" alt="Karim Dabbour">
+          <div class="review-info">
+            <h3>Karim Dabbour</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"Amazing food, great vibes, and very affordable compared to other cities."</p>
+      </div>
 
-		</div>
-	</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c6.png" alt="Ioana Petrescu">
+          <div class="review-info">
+            <h3>Ioana Petrescu</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">★★★☆☆</div>
+        </div>
+        <p class="review-text">"Oraș viu și autentic, cu mâncare excelentă și localnici primitori."</p>
+      </div>
+
+    </div>
+
+    <!-- Butonul de afișare completă -->
+    <p style="margin-top: 10px;">
+      <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
+        Read all reviews <span id="toggle-arrow">&#x25BC;</span>
+      </a>
+    </p>
+  </div>
+  <section class="review-section">
+  <h3>Reviews by City</h3>
+<button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
+
+<!-- Review Popup Modal -->
+<div id="review-popup" class="hidden review-popup">
+  <div class="popup-content">
+  <span class="close" onclick="closeReviewPopup()">&times;</span>
+
+    <h3>Leave a Review</h3>
+
+    <div class="star-rating" id="star-rating"></div>
+    <textarea placeholder="Your review..."></textarea>
+<button class="submit-button" onclick="submitReviewAdana()">Submit</button>
+
+
+  </div>
+</div>
+		</section>
 </section>
-<!--/.reviews-->
+<!--reviews end -->
+
 		<!--reviews end -->
 		<!--blog start -->
 		<section id="blog" class="blog">
@@ -636,38 +599,35 @@
 </div>
 <!-- User Account Sidebar -->
 <div id="user-profile-panel" class="favorites-slide">
-  <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
-  <div class="user-info">
+    <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
+<div class="user-info">
     <h3 class="favorites-title">Contul Meu</h3>
     <p><strong>Username:</strong> <span id="profile-username"></span></p>
     <p><strong>Email:</strong> <span id="profile-email"></span></p>
-    <p><strong>Parola:</strong> <span id="profile-password"></span>
-      <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
+    <p><strong>Parola:</strong> <span id="profile-password"></span> 
+        <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
     </p>
 
     <div class="profile-picture-section">
-      <p><strong>Profile picture:</strong></p>
-      <img id="current-profile-image" src="assets/images/users/user.png" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" alt="Profile">
-      <div id="profile-options">
-        <p>Choose another photo:</p>
-        <div class="profile-options-container">
-          <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
-          <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
+        <p><strong>Profile picture:</strong></p>
+        <img id="current-profile-image" src="assets/images/users/user.png" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" alt="Profile">
+        <div id="profile-options">
+            <p>Choose another photo:</p>
+            <div class="profile-options-container">
+                <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
+				<img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
+                <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
+            </div>
         </div>
-      </div>
     </div>
+	<button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
 
-    <button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
-  </div>
 </div>
-
-
 
 <!-- Modal pentru hartă -->
 <div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
@@ -792,6 +752,121 @@ function closeMap() {
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/locations.js"></script>
 <script src="assets/js/favorites.js"></script>
+<script src="assets/js/reviews.js"></script>
+<script>
+let reviewsVisible = false;
+
+function toggleReviews() {
+  reviewsVisible = !reviewsVisible;
+  applyReviewHidingLogic();
+   if (!reviewsVisible) {
+    // Scroll la secțiunea "reviews"
+    document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+  }
+  
+}
+</script>
+<script>
+function renderAdanaReviews() {
+  const container = document.getElementById("all-reviews-container");
+  if (!container) return;
+
+  container.querySelectorAll(".user-review").forEach(el => el.remove());
+
+  const city = "adana";
+  const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+
+  const userReviews = [];
+  const otherReviews = [];
+
+  reviews.forEach(r => {
+    const stars = "★".repeat(r.rating);
+    const canDelete = (r.email === currentUserEmail);
+
+    const reviewHTML = `
+      <div class="review-card user-review" data-email="${r.email}">
+        <div class="review-header">
+          <img src="${r.photo}" alt="${r.username}">
+          <div class="review-info">
+            <h3>${r.username}</h3>
+            <p class="review-location">Adana</p>
+          </div>
+          <div class="review-rating">${stars}</div>
+        </div>
+        <p class="review-text">"${r.text}"</p>
+        ${canDelete ? `<button onclick="deleteAdanaReview()" class="review-delete-btn">Delete</button>` : ""}
+      </div>
+    `;
+
+    if (canDelete) {
+      userReviews.unshift(reviewHTML);
+    } else {
+      otherReviews.push(reviewHTML);
+    }
+  });
+
+  userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+  otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
+
+  applyReviewHidingLogic();
+}
+</script>
+<script>
+function deleteAdanaReview() {
+  const city = "adana";
+  const confirmDelete = confirm("Are you sure you want to delete your review?");
+  if (!confirmDelete) return;
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews = reviews.filter(r => r.email !== currentUserEmail);
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  const container = document.getElementById("all-reviews-container");
+  const userReviewForCity = Array.from(container.querySelectorAll(`.user-review[data-email="${currentUserEmail}"]`))
+    .find(div => div.querySelector(".review-location")?.textContent?.toLowerCase() === city);
+  if (userReviewForCity) userReviewForCity.remove();
+
+  showMessage("Review deleted.");
+  applyReviewHidingLogic();
+}
+
+// suprascrie butonul de submit pentru acest oraș
+function submitReviewAdana() {
+  const city = "adana";
+  const rating = document.querySelectorAll(".star-rating .selected").length;
+  const text = document.querySelector("#review-popup textarea").value.trim();
+
+  if (!text || rating === 0) {
+    showMessage("Please add a comment and a rating.");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.email === currentUserEmail);
+  const username = user?.username || currentUserEmail.split("@")[0];
+  const photo = localStorage.getItem(`profileImage_${currentUserEmail}`) || "assets/images/users/user.png";
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews.push({ email: currentUserEmail, username, text, rating, photo });
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  document.getElementById("review-popup").classList.add("hidden");
+  showMessage("Thank you for your review!");
+
+  setTimeout(() => {
+    renderAdanaReviews();
+  }, 50);
+}
+
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderAdanaReviews();
+  });
+</script>
+
+
 
         
         <!--modernizr.min.js-->

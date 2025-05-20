@@ -52,30 +52,7 @@
 <link rel="stylesheet" href="assets/css/favorites-style.css"></head>
 
 <body>
-<!-- header-top start -->
-<header id="header-top" class="header-top">
-    <ul>
-        <li>
-            <div class="header-top-left">
-                <ul>
-                    <li class="select-opt">
-                        <select name="language" id="language">
-                            <option value="default">EN</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <select name="currency" id="currency">
-                            <option value="usd">USD</option>
-                        </select>
-                    </li>
-                    <li class="select-opt">
-                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</header>
+
 
 <!-- Navigation Start -->
 <section class="top-area">
@@ -409,125 +386,111 @@
 </div>
 
 		<!--reviews start -->
-<section id="reviews" class="reviews"> <div class="section-header"> <h2>clients reviews</h2> <p>What our clients say about Pamukkale!</p> </div> <div class="reviews-content"> <div class="testimonial-carousel">
+<section id="reviews" class="reviews">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our clients say about Pamukkale!</p>
+  </div>
+  <div class="reviews-content">
+    <div id="all-reviews-container" class="review-list">
 
-		<!-- Review 1 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c1.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Selin Yılmaz</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"Bembeyaz travertenler ve sıcak su havuzları muhteşemdi. Unutulmaz bir deneyim!"</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c1.png" alt="Selin Yılmaz">
+          <div class="review-info">
+            <h3>Selin Yılmaz</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Bembeyaz travertenler ve sıcak su havuzları muhteşemdi. Unutulmaz bir deneyim!"</p>
+      </div>
 
-		<!-- Review 2 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c2.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Lucas Meyer</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"The natural pools are stunning, but it gets crowded in the afternoon. Go early for the best photos."</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c2.png" alt="Lucas Meyer">
+          <div class="review-info">
+            <h3>Lucas Meyer</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"The natural pools are stunning, but it gets crowded in the afternoon. Go early for the best photos."</p>
+      </div>
 
-		<!-- Review 3 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c3.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Elif Demir</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"Hierapolis antik kentiyle birlikte gezmek harika. Hem tarih hem doğa bir arada."</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c3.png" alt="Elif Demir">
+          <div class="review-info">
+            <h3>Elif Demir</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Hierapolis antik kentiyle birlikte gezmek harika. Hem tarih hem doğa bir arada."</p>
+      </div>
 
-		<!-- Review 4 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c4.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Anna Rossi</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"Beautiful place, but walking barefoot on the travertines can be slippery. Bring water shoes!"</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c4.png" alt="Anna Rossi">
+          <div class="review-info">
+            <h3>Anna Rossi</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★☆☆</div>
+        </div>
+        <p class="review-text">"Beautiful place, but walking barefoot on the travertines can be slippery. Bring water shoes!"</p>
+      </div>
 
-		<!-- Review 5 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c5.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Mehmet Aksoy</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"Pamukkale'nin manzarasına karşı yüzmek bir başka. Fotoğraf çekmek için harika bir yer."</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c5.png" alt="Mehmet Aksoy">
+          <div class="review-info">
+            <h3>Mehmet Aksoy</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Pamukkale'nin manzarasına karşı yüzmek bir başka. Fotoğraf çekmek için harika bir yer."</p>
+      </div>
 
-		<!-- Review 6 -->
-		<div class="single-testimonial-box">
-			<div class="testimonial-description">
-				<div class="testimonial-info">
-					<div class="testimonial-img"><img src="assets/images/clients/c6.png" alt="client"></div>
-					<div class="testimonial-person">
-						<h2>Irina Popescu</h2>
-						<h4>Pamukkale</h4>
-						<div class="testimonial-person-star">
-							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-comment">
-					<p>"Peisaj de vis, ape termale relaxante. Recomand pentru o escapadă în natură."</p>
-				</div>
-			</div>
-		</div>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c6.png" alt="Irina Popescu">
+          <div class="review-info">
+            <h3>Irina Popescu</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+        </div>
+        <p class="review-text">"Peisaj de vis, ape termale relaxante. Recomand pentru o escapadă în natură."</p>
+      </div>
 
-	</div>
-</div>
+    </div>
+
+    <p style="margin-top: 10px;">
+      <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
+        Read all reviews <span id="toggle-arrow">&#x25BC;</span>
+      </a>
+    </p>
+  </div>
+
+  <section class="review-section">
+    <h3>Reviews by City</h3>
+    <button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
+
+    <div id="review-popup" class="hidden review-popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeReviewPopup()">&times;</span>
+        <h3>Leave a Review</h3>
+        <div class="star-rating" id="star-rating"></div>
+        <textarea placeholder="Your review..."></textarea>
+        <button class="submit-button" onclick="submitReviewPamukkale()">Submit</button>
+      </div>
+    </div>
+  </section>
 </section>
+
 		<!--reviews end -->
 		<!--blog start -->
 		<section id="blog" class="blog">
@@ -868,6 +831,119 @@ function closeMap() {
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/locations.js"></script>
 <script src="assets/js/favorites.js"></script>
+<script src="assets/js/reviews.js"></script>
+<script>
+let reviewsVisible = false;
+
+function toggleReviews() {
+  reviewsVisible = !reviewsVisible;
+  applyReviewHidingLogic();
+   if (!reviewsVisible) {
+    // Scroll la secțiunea "reviews"
+    document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+  }
+  
+}
+</script>
+<script>
+function renderPamukkaleReviews() {
+  const container = document.getElementById("all-reviews-container");
+  if (!container) return;
+
+  container.querySelectorAll(".user-review").forEach(el => el.remove());
+
+  const city = "pamukkale";
+  const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+
+  const userReviews = [];
+  const otherReviews = [];
+
+  reviews.forEach(r => {
+    const stars = "★".repeat(r.rating);
+    const canDelete = (r.email === currentUserEmail);
+
+    const reviewHTML = `
+      <div class="review-card user-review" data-email="${r.email}">
+        <div class="review-header">
+          <img src="${r.photo}" alt="${r.username}">
+          <div class="review-info">
+            <h3>${r.username}</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">${stars}</div>
+        </div>
+        <p class="review-text">"${r.text}"</p>
+        ${canDelete ? `<button onclick="deletePamukkaleReview()" class="review-delete-btn">Delete</button>` : ""}
+      </div>
+    `;
+
+    if (canDelete) {
+      userReviews.unshift(reviewHTML);
+    } else {
+      otherReviews.push(reviewHTML);
+    }
+  });
+
+  userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+  otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
+
+  applyReviewHidingLogic();
+}
+</script>
+
+<script>
+function deletePamukkaleReview() {
+  const city = "pamukkale";
+  const confirmDelete = confirm("Are you sure you want to delete your review?");
+  if (!confirmDelete) return;
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews = reviews.filter(r => r.email !== currentUserEmail);
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  const container = document.getElementById("all-reviews-container");
+  const userReviewForCity = Array.from(container.querySelectorAll(`.user-review[data-email="${currentUserEmail}"]`))
+    .find(div => div.querySelector(".review-location")?.textContent?.toLowerCase() === city);
+  if (userReviewForCity) userReviewForCity.remove();
+
+  showMessage("Review deleted.");
+  applyReviewHidingLogic();
+}
+
+function submitReviewPamukkale() {
+  const city = "pamukkale";
+  const rating = document.querySelectorAll(".star-rating .selected").length;
+  const text = document.querySelector("#review-popup textarea").value.trim();
+
+  if (!text || rating === 0) {
+    showMessage("Please add a comment and a rating.");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.email === currentUserEmail);
+  const username = user?.username || currentUserEmail.split("@")[0];
+  const photo = localStorage.getItem(`profileImage_${currentUserEmail}`) || "assets/images/users/user.png";
+
+  let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+  reviews.push({ email: currentUserEmail, username, text, rating, photo });
+  localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
+
+  document.getElementById("review-popup").classList.add("hidden");
+  showMessage("Thank you for your review!");
+
+  setTimeout(() => {
+    renderPamukkaleReviews();
+  }, 50);
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderPamukkaleReviews();
+  });
+</script>
+
 
         
         <!--modernizr.min.js-->

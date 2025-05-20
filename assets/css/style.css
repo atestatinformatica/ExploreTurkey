@@ -636,6 +636,60 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         8. Reviews
 --------------------------------------*/
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review-info {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.review-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.review-location {
+  color: #777;
+  font-size: 14px;
+}
+
+.review-rating {
+  font-size: 16px;
+  color: #f39c12;
+}
+
+.review-text {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.hidden-review {
+  display: none;
+}
+
 .reviews{padding:117px 0 75px;}
 .reviews-content {margin-top:36px;}
 
@@ -1325,7 +1379,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     font-size: 12px;
     border-radius: 5px;
     cursor: pointer;
-    float: right;
+
 }
 
 .submit-button {

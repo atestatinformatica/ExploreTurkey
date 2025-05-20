@@ -4,6 +4,14 @@ let currentUserEmail = "";
 let userProfileImage = "assets/images/users/user.png";
 
 function login(email) {
+if (isLoggedIn) {
+    if (email === currentUserEmail) {
+      showMessage("You are already logged in with this account.");
+    } else {
+      showMessage("Please log out before logging in with another account.");
+    }
+    return;
+  }
   isLoggedIn = true;
   currentUserEmail = email;
   const savedImage = localStorage.getItem(`profileImage_${email}`);
@@ -317,6 +325,9 @@ function openReviewPopup() {
     document.getElementById("review-city").value = "";
     popup.querySelector("textarea").value = "";
 }
+function closeReviewPopup() {
+    document.getElementById("review-popup").classList.add("hidden");
+}
 
 
 function submitReviewPopup() {
@@ -335,10 +346,6 @@ function submitReviewPopup() {
   const photo = localStorage.getItem(`profileImage_${currentUserEmail}`) || "assets/images/users/user.png";
 
   let reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
-
-  if (reviews.find(r => r.email === currentUserEmail)) {
-    return showMessage("You already left a review for this city.");
-  }
 
   reviews.push({ email: currentUserEmail, username, text, rating, photo });
   localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
@@ -414,16 +421,11 @@ function selectProfileImage(src) {
     localStorage.setItem(`reviews_${city}`, JSON.stringify(reviews));
   });
 
-  document.querySelectorAll('.single-testimonial-box.user-review').forEach(box => {
-    if (box.dataset.email === currentUserEmail) {
-      const image = box.querySelector('.testimonial-img img');
-      if (image) image.src = src;
-    }
+  // 🔥 ACTUALIZARE IMEDIATĂ ÎN DOM
+  document.querySelectorAll(`#all-reviews-container .user-review[data-email="${currentUserEmail}"] .review-header img`).forEach(img => {
+    img.src = src;
   });
 }
-
-
-
 
 
 
@@ -445,4 +447,32 @@ if (savedImage) {
 }
 
 }
+function applyReviewHidingLogic() {
+  const container = document.getElementById("all-reviews-container");
+  if (!container) return;
+
+  const allReviews = container.querySelectorAll(".review-card");
+  allReviews.forEach((card, index) => {
+    if (index > 2) {
+      card.classList.add("hidden-review");
+      card.style.display = reviewsVisible ? "block" : "none";
+    } else {
+      card.classList.remove("hidden-review");
+      card.style.display = "block";
+    }
+  });
+
+  // Actualizăm și textul butonului dacă e nevoie
+  const toggleBtn = document.getElementById("read-more-reviews");
+  const arrow = document.getElementById("toggle-arrow");
+  if (allReviews.length <= 3) {
+    toggleBtn.style.display = "none";
+  } else {
+    toggleBtn.style.display = "inline";
+    toggleBtn.innerHTML = reviewsVisible
+      ? 'Hide reviews <span id="toggle-arrow">&#x25B2;</span>'
+      : 'Read all reviews <span id="toggle-arrow">&#x25BC;</span>';
+  }
+}
+
 

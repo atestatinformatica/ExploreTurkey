@@ -1,265 +1,203 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExploreTurkey</title>
+<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/linearicons.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+<link rel="stylesheet" href="assets/css/bootsnav.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/favorites-style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>ExploreTurkey</title>
+<body>
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-        <!--linear icon css-->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
-
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-
-		<!--flaticon.css-->
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-
-		<!--slick.css-->
-        <link rel="stylesheet" href="assets/css/slick.css">
-		<link rel="stylesheet" href="assets/css/slick-theme.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-	
-	<body>
-
-		<!-- top-area Start -->
-		<section class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-			        <div class="container">
-
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
-
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
-
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                    <li class=" scroll active"><a href="#home">home</a></li>
-			                    <li class="scroll"><a href="#works">how it works</a></li>
-			                    <li class="scroll"><a href="#explore">explore</a></li>
-			                    <li class="scroll"><a href="#reviews">review</a></li>
-			                    <li class="scroll"><a href="#blog">blog</a></li>
-			                    <li class="scroll"><a href="#login">login</a></li>
-								
-
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
-		    <div class="clearfix"></div>
-
-		</section><!-- /.top-area-->
-		<!-- top-area End -->
-
-		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero">
-			<div class="container">
-				<div class="welcome-hero-txt">
-					<h2>Explore Turkey: From Istanbul’s Lights <br>to Cappadocia’s Skies</h2>
-					<p>
-						Plan your perfect trip through Türkiye’s most stunning destinations.
-					</p>
-				</div>
-				<div class="welcome-hero-serch-box">
-					<div class="welcome-hero-form">
-						<div class="single-welcome-hero-form">
-					
-							<h3>location</h3>
-							<form onsubmit="searchCity(event)">
-							<form action="index.html">
-								<input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
-							</form>
-							<div class="welcome-hero-form-icon">
-								<!--<i class="flaticon-gps-fixed-indicator"></i>-->
-							</div>
-						</div>
-					</div>
-					<div class="welcome-hero-serch">
-					<button class="welcome-hero-btn" onclick="searchCity(event)">search <i data-feather="search"></i>
-                    </button>
-					</div>
-				</div>
-			</div>
-
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
-
-		<!--list-topics start -->
-	<section id="list-topics" class="list-topics">
-	<div class="container">
-		<div class="list-topics-content">
-			<ul>
-				<li>
-					<div class="single-list-topics-content">
-						<div class="single-list-topics-icon">
-							<!-- Imagine mică cu pop-up -->
-							<img src="assets/images/turkey/istanbul.jpg" style="width: 100px;" alt="Istanbul" onclick="openPopup('assets/images/turkey/istanbul.jpg')">
-						</div>
-						<h2><a href="istanbul.html">Istanbul</a></h2>
-						<p>City of Two Continents</p>
-					</div>
-				</li>
-				<li>
-					<div class="single-list-topics-content">
-						<div class="single-list-topics-icon">
-							<!-- Imagine mică cu pop-up -->
-							<img src="assets/images/turkey/cappadocia.jpg" style="width: 100px;" alt="Cappadocia" onclick="openPopup('assets/images/turkey/cappadocia.jpg')">
-						</div>
-						<h2><a href="cappadocia.html">Cappadocia</a></h2>
-						<p>Hot Air Balloon Paradise</p>
-					</div>
-				</li>
-				<li>
-					<div class="single-list-topics-content">
-						<div class="single-list-topics-icon">
-							<!-- Imagine mică cu pop-up -->
-							<img src="assets/images/turkey/Antalya.jpg" style="width: 100px;" alt="Antalya" onclick="openPopup('assets/images/turkey/Antalya.jpg')">
-						</div>
-						<h2><a href="antalya.html">Antalya</a></h2>
-						<p>Turquoise Coast Vibes</p>
-					</div>
-				</li>
-				<li>
-					<div class="single-list-topics-content">
-						<div class="single-list-topics-icon">
-							<!-- Imagine mică cu pop-up -->
-							<img src="assets/images/turkey/Izmir.jpg" style="width: 100px;" alt="Izmir" onclick="openPopup('assets/images/turkey/Izmir.jpg')">
-						</div>
-						<h2><a href="izmir.html">Izmir</a></h2>
-						<p>Modern and Historic</p>
-					</div>
-				</li>
-				<li>
-					<div class="single-list-topics-content">
-						<div class="single-list-topics-icon">
-							<!-- Imagine mică cu pop-up -->
-							<img src="assets/images/turkey/Pamukkale.jpg" style="width: 100px;" alt="Pamukkale" onclick="openPopup('assets/images/turkey/Pamukkale.jpg')">
-						</div>
-						<h2><a href="pamukkale.html">Pamukkale</a></h2>
-						<p>Thermal Springs & Wonders</p>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
+<!-- HEADER / NAVBAR SECTION -->
+<section class="top-area">
+  <div class="header-area">
+    <nav class="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+        </div>
+        <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+          <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+            <li class="scroll active"><a href="#home">home</a></li>
+            <li class="scroll"><a href="#works">how it works</a></li>
+            <li class="scroll"><a href="#explore">explore</a></li>
+            <li class="scroll"><a href="#reviews">review</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#login">login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="clearfix"></div>
 </section>
 
-<!-- Fereastra pop-up (ascunsă inițial) -->
-<!-- Fereastra pop-up pentru imagini -->
+<!-- HOME SECTION -->
+<section id="home" class="welcome-hero">
+  <div class="container">
+    <div class="welcome-hero-txt">
+      <h2>Explore Turkey: From Istanbul’s Lights <br>to Cappadocia’s Skies</h2>
+      <p>Plan your perfect trip through Türkiye’s most stunning destinations.</p>
+    </div>
+    <div class="welcome-hero-serch-box">
+      <div class="welcome-hero-form">
+        <div class="single-welcome-hero-form">
+          <h3>location</h3>
+          <form onsubmit="searchCity(event)">
+            <input type="text" id="location-input" placeholder="Ex: Istanbul, Antalya, Izmir...">
+          </form>
+        </div>
+      </div>
+      <div class="welcome-hero-serch">
+        <button class="welcome-hero-btn" onclick="searchCity(event)">search <i data-feather="search"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+		<!-- LIST SECTION -->
+<section id="list-topics" class="list-topics">
+  <div class="container">
+    <div class="list-topics-content">
+      <ul>
+        <li>
+          <div class="single-list-topics-content">
+            <div class="single-list-topics-icon">
+              <img src="assets/images/turkey/istanbul.jpg" style="width: 100px;" alt="Istanbul" onclick="openPopup('assets/images/turkey/istanbul.jpg')">
+            </div>
+            <h2><a href="istanbul.html">Istanbul</a></h2>
+            <p>City of Two Continents</p>
+          </div>
+        </li>
+        <li>
+          <div class="single-list-topics-content">
+            <div class="single-list-topics-icon">
+              <img src="assets/images/turkey/cappadocia.jpg" style="width: 100px;" alt="Cappadocia" onclick="openPopup('assets/images/turkey/cappadocia.jpg')">
+            </div>
+            <h2><a href="cappadocia.html">Cappadocia</a></h2>
+            <p>Hot Air Balloon Paradise</p>
+          </div>
+        </li>
+        <li>
+          <div class="single-list-topics-content">
+            <div class="single-list-topics-icon">
+              <img src="assets/images/turkey/Antalya.jpg" style="width: 100px;" alt="Antalya" onclick="openPopup('assets/images/turkey/Antalya.jpg')">
+            </div>
+            <h2><a href="antalya.html">Antalya</a></h2>
+            <p>Turquoise Coast Vibes</p>
+          </div>
+        </li>
+        <li>
+          <div class="single-list-topics-content">
+            <div class="single-list-topics-icon">
+              <img src="assets/images/turkey/Izmir.jpg" style="width: 100px;" alt="Izmir" onclick="openPopup('assets/images/turkey/Izmir.jpg')">
+            </div>
+            <h2><a href="izmir.html">Izmir</a></h2>
+            <p>Modern and Historic</p>
+          </div>
+        </li>
+        <li>
+          <div class="single-list-topics-content">
+            <div class="single-list-topics-icon">
+              <img src="assets/images/turkey/Pamukkale.jpg" style="width: 100px;" alt="Pamukkale" onclick="openPopup('assets/images/turkey/Pamukkale.jpg')">
+            </div>
+            <h2><a href="pamukkale.html">Pamukkale</a></h2>
+            <p>Thermal Springs & Wonders</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE POPUP -->
 <div id="popup" class="popup" style="display: none;">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <img id="popup-img" class="popup-content" src="" alt="Pop-up Imagine">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img id="popup-img" class="popup-content" src="" alt="Pop-up Imagine">
 </div>
 
-<!--works start -->
+<!-- HOW IT WORKS SECTION -->
 <section id="works" class="works">
-    <div class="container">
-        <div class="section-header">
-            <h2>how it works</h2>
-            <p>Discover how to explore and perfectly plan your vacation in Turkey!</p>
-        </div><!--/.section-header-->
-        <div class="works-content">
-            <div class="row">
-                <!-- Step 1: Choose Where to Go -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-how-works text-center">
-                        <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
-                            <i class="flaticon-lightbulb-idea"></i> <!-- Bec păstrat -->
-                        </div>
-                        <h2><a href="#">choose <span>where to</span> go</a></h2>
-                        <p>
-                            Browse hundreds of attractions and add your favorites by simply clicking the heart icon. Revisit your personal travel list anytime!
-                        </p>
-                        <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('Browse hundreds of attractions and add your favorites by simply clicking the heart icon. Revisit your personal travel list anytime! Explore iconic landmarks, cultural sites, and breathtaking landscapes across Turkey. When you find a destination you love, click the heart icon to save it to your favorites. Your personalized list makes it easy to organize the perfect trip tailored to your dreams!')">
-                            read more
-                        </button>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="section-header">
+      <h2>how it works</h2>
+      <p>Discover how to explore and perfectly plan your vacation in Turkey!</p>
+    </div>
+    <div class="works-content">
+      <div class="row">
 
-                <!-- Step 2: Plan Your Trip -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-how-works text-center">
-                        <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
-                            <i class="fa fa-plane"></i> <!-- Avion mărit -->
-                        </div>
-                        <h2><a href="#">plan <span>your</span> trip</a></h2>
-                        <p>
-                            Direct flights are available from major European cities. Overland travel requires valid international car insurance (Green Card).
-                        </p>
-                        <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('Direct flights are available from major European cities. Overland travel requires valid international car insurance (Green Card). Select the best way to reach Turkey: fly directly to Istanbul, Antalya, or Izmir, or drive through neighboring countries with valid insurance. International buses also offer affordable options. Estimate your travel costs and time based on your departure city to ensure a smooth and efficient journey!')">
-                            read more
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Step 3: Cost and Requirements -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="single-how-works text-center">
-                        <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
-                            <i class="fa fa-id-card"></i> <!-- ID card mărit -->
-                        </div>
-                        <h2><a href="#">cost <span>and</span> requirements</a></h2>
-                        <p>
-                            A valid passport is mandatory. Most European citizens can travel visa-free for stays up to 90 days. Average budget: €500–€1000 per week.
-                        </p>
-                        <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('A valid passport is mandatory. Most European citizens can travel visa-free for stays up to 90 days. Average budget: €500–€1000 per week. Make sure your passport is valid for at least 150 days from your arrival date in Turkey. Citizens of the EU, UK, and many other countries can enjoy visa-free travel for tourism purposes for up to 90 days. Check if a visa is needed based on your nationality. Budget carefully: an average traveler spends around €500–€1000 weekly, depending on accommodation and activities.')">
-                            read more
-                        </button>
-                    </div>
-                </div>
-
+        <div class="col-md-4 col-sm-6">
+          <div class="single-how-works text-center">
+            <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
+              <i class="flaticon-lightbulb-idea"></i>
             </div>
+            <h2><a href="#">choose <span>where to</span> go</a></h2>
+            <p>
+              Browse hundreds of attractions and add your favorites by simply clicking the heart icon. Revisit your personal travel list anytime!
+            </p>
+            <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('Browse hundreds of attractions and add your favorites by simply clicking the heart icon. Revisit your personal travel list anytime! Explore iconic landmarks, cultural sites, and breathtaking landscapes across Turkey. When you find a destination you love, click the heart icon to save it to your favorites. Your personalized list makes it easy to organize the perfect trip tailored to your dreams!')">
+              read more
+            </button>
+          </div>
         </div>
-    </div><!--/.container-->
-</section><!--/.works-->
-<!--works end -->
+
+        <div class="col-md-4 col-sm-6">
+          <div class="single-how-works text-center">
+            <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
+              <i class="fa fa-plane"></i>
+            </div>
+            <h2><a href="#">plan <span>your</span> trip</a></h2>
+            <p>
+              Direct flights are available from major European cities. Overland travel requires valid international car insurance (Green Card).
+            </p>
+            <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('Direct flights are available from major European cities. Overland travel requires valid international car insurance (Green Card). Select the best way to reach Turkey: fly directly to Istanbul, Antalya, or Izmir, or drive through neighboring countries with valid insurance. International buses also offer affordable options. Estimate your travel costs and time based on your departure city to ensure a smooth and efficient journey!')">
+              read more
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="single-how-works text-center">
+            <div class="single-how-works-icon" style="font-size: 35px; margin-bottom: 20px;">
+              <i class="fa fa-id-card"></i>
+            </div>
+            <h2><a href="#">cost <span>and</span> requirements</a></h2>
+            <p>
+              A valid passport is mandatory. Most European citizens can travel visa-free for stays up to 90 days. Average budget: €500–€1000 per week.
+            </p>
+            <button class="welcome-hero-btn how-work-btn" onclick="openPopupText('A valid passport is mandatory. Most European citizens can travel visa-free for stays up to 90 days. Average budget: €500–€1000 per week. Make sure your passport is valid for at least 150 days from your arrival date in Turkey. Citizens of the EU, UK, and many other countries can enjoy visa-free travel for tourism purposes for up to 90 days. Check if a visa is needed based on your nationality. Budget carefully: an average traveler spends around €500–€1000 weekly, depending on accommodation and activities.')">
+              read more
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -515,164 +453,162 @@
 
 
 
-		<!--reviews start -->
-				<section id="reviews" class="reviews">
-			<div class="section-header">
-				<h2>clients reviews</h2>
-				<p>What our clients say about Turkey!</p>
-			</div><!--/.section-header-->
-			<div class="reviews-content">
-<div id="all-reviews-container" class="review-list">
- <div class="review-card">
-    <div class="review-header">
-      <img src="assets/images/clients/c1.png" alt="Emre Yıldız">
-      <div class="review-info">
-        <h3>Emre Yıldız</h3>
-        <p class="review-location">Istanbul</p>
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our clients say about Turkey!</p>
+  </div>
+
+  <div class="reviews-content">
+    <!-- Container pentru toate recenziile (primele 3 vizibile, restul ascunse inițial) -->
+    <div id="all-reviews-container" class="review-list">
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c1.png" alt="Emre Yıldız">
+          <div class="review-info">
+            <h3>Emre Yıldız</h3>
+            <p class="review-location">Istanbul</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Amazing mix of history and modern life. Both the European and Asian sides are worth exploring. Hagia Sophia was breathtaking!"</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Amazing mix of history and modern life. Both the European and Asian sides are worth exploring. Hagia Sophia was breathtaking!"</p>
-  </div>
 
-  <div class="review-card">
-    <div class="review-header">
-      <img src="assets/images/clients/c2.png" alt="Luca Rossi">
-      <div class="review-info">
-        <h3>Luca Rossi</h3>
-        <p class="review-location">Izmir</p>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c2.png" alt="Luca Rossi">
+          <div class="review-info">
+            <h3>Luca Rossi</h3>
+            <p class="review-location">Izmir</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Izmir è moderna ma ricca di storia. Bellissima passeggiata sul mare e monumenti interessanti nel centro."</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Izmir è moderna ma ricca di storia. Bellissima passeggiata sul mare e monumenti interessanti nel centro."</p>
-  </div>
 
-  <div class="review-card">
-    <div class="review-header">
-      <img src="assets/images/clients/c3.png" alt="Zeynep Kaya">
-      <div class="review-info">
-        <h3>Zeynep Kaya</h3>
-        <p class="review-location">Pamukkale</p>
+      <div class="review-card">
+        <div class="review-header">
+          <img src="assets/images/clients/c3.png" alt="Zeynep Kaya">
+          <div class="review-info">
+            <h3>Zeynep Kaya</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Pamukkale’nin beyaz terasları harika. Termal su çok rahatlatıcı. Doğa ve huzur bir arada."</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Pamukkale’nin beyaz terasları harika. Termal su çok rahatlatıcı. Doğa ve huzur bir arada."</p>
-  </div>
 
-
-
-
-
-  <!-- Celelalte recenzii ascunse inițial -->
-  <div class="review-card hidden-review">
-    <div class="review-header">
-      <img src="assets/images/clients/c4.png" alt="Maria González">
-      <div class="review-info">
-        <h3>Maria González</h3>
-        <p class="review-location">Antalya</p>
+      <!-- Recenzii suplimentare ascunse inițial (vizibile cu "Read all reviews") -->
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c4.png" alt="Maria González">
+          <div class="review-info">
+            <h3>Maria González</h3>
+            <p class="review-location">Antalya</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Beautiful beaches and warm sea. Great place to relax and enjoy both nature and ancient ruins."</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Beautiful beaches and warm sea. Great place to relax and enjoy both nature and ancient ruins."</p>
-  </div>
-  <div class="review-card hidden-review">
-    <div class="review-header">
-      <img src="assets/images/clients/c5.png" alt="Hasan Aydın">
-      <div class="review-info">
-        <h3>Hasan Aydın</h3>
-        <p class="review-location">Pamukkale</p>
+
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c5.png" alt="Hasan Aydın">
+          <div class="review-info">
+            <h3>Hasan Aydın</h3>
+            <p class="review-location">Pamukkale</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Pamukkale’de yürümek ay gibi hissettiriyor. Su sıcak și manzara harika!"</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Pamukkale’de yürümek ay gibi hissettiriyor. Su sıcak și manzara harika!"</p>
-  </div>
-  <div class="review-card hidden-review">
-    <div class="review-header">
-      <img src="assets/images/clients/c6.png" alt="Raluca Ionescu">
-      <div class="review-info">
-        <h3>Raluca Ionescu</h3>
-        <p class="review-location">Antalya</p>
+
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c6.png" alt="Raluca Ionescu">
+          <div class="review-info">
+            <h3>Raluca Ionescu</h3>
+            <p class="review-location">Antalya</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Plajele sunt superbe, apa caldă și clară. Un loc ideal pentru relaxare."</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Plajele sunt superbe, apa caldă și clară. Un loc ideal pentru relaxare."</p>
-  </div>
 
-  <div class="review-card hidden-review">
-    <div class="review-header">
-      <img src="assets/images/clients/c7.png" alt="Amira Hassan">
-      <div class="review-info">
-        <h3>Amira Hassan</h3>
-        <p class="review-location">Cappadocia</p>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c7.png" alt="Amira Hassan">
+          <div class="review-info">
+            <h3>Amira Hassan</h3>
+            <p class="review-location">Cappadocia</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Riding a balloon at sunrise was like a dream. Silent skies, surreal views—unforgettable!"</p>
       </div>
-      <div class="review-rating">★★★★★</div>
-    </div>
-    <p class="review-text">"Riding a balloon at sunrise was like a dream. Silent skies, surreal views—unforgettable!"</p>
-  </div>
 
-  <div class="review-card hidden-review">
-    <div class="review-header">
-      <img src="assets/images/clients/c8.png" alt="Ahmed Al-Farsi">
-      <div class="review-info">
-        <h3>Ahmed Al-Farsi</h3>
-        <p class="review-location">Cappadocia</p>
+      <div class="review-card hidden-review">
+        <div class="review-header">
+          <img src="assets/images/clients/c8.png" alt="Ahmed Al-Farsi">
+          <div class="review-info">
+            <h3>Ahmed Al-Farsi</h3>
+            <p class="review-location">Cappadocia</p>
+          </div>
+          <div class="review-rating">★★★★★</div>
+        </div>
+        <p class="review-text">"Unforgettable views from the hot air balloon. The rock formations are like something from another world. Loved it!"</p>
       </div>
-      <div class="review-rating">★★★★★</div>
     </div>
-    <p class="review-text">"Unforgettable views from the hot air balloon. The rock formations are like something from another world. Loved it!"</p>
+
+    <!-- Buton pentru afișarea/ascunderea tuturor recenziilor -->
+    <p style="margin-top: 10px;">
+      <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
+        Read all reviews <span id="toggle-arrow">&#x25BC;</span>
+      </a>
+    </p>
   </div>
-</div>
 
-<!-- Butonul de afișare completă -->
-<p style="margin-top: 10px;">
-  <a id="read-more-reviews" href="javascript:void(0)" onclick="toggleReviews()" style="font-weight: bold; color: #ff545a; padding: 5px;">
-    Read all reviews <span id="toggle-arrow">&#x25BC;</span>
-  </a>
-</p>
+  <!-- FORMULARE ȘI POP-UP PENTRU RECENZII NOI -->
+  <section class="review-section">
+    <h3>Reviews by City</h3>
+    <button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
 
+    <!-- Fereastră pop-up pentru recenzie nouă -->
+    <div id="review-popup" class="hidden review-popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeReviewPopup()">&times;</span>
+        <h3>Leave a Review</h3>
 
+        <label for="review-city">Select City:</label>
+        <select id="review-city">
+          <option value="">-- Choose a city --</option>
+          <option value="adana">Adana</option>
+          <option value="ankara">Ankara</option>
+          <option value="antalya">Antalya</option>
+          <option value="bursa">Bursa</option>
+          <option value="cappadocia">Cappadocia</option>
+          <option value="gaziantep">Gaziantep</option>
+          <option value="istanbul">Istanbul</option>
+          <option value="izmir">Izmir</option>
+          <option value="kayseri">Kayseri</option>
+          <option value="konya">Konya</option>
+          <option value="mardin">Mardin</option>
+          <option value="pamukkale">Pamukkale</option>
+          <option value="sanliurfa">Sanliurfa</option>
+          <option value="trabzon">Trabzon</option>
+        </select>
 
-</div>
-<section class="review-section">
-  <h3>Reviews by City</h3>
-<button class="leave-review-btn" onclick="handleLeaveReview()">Leave a Review</button>
+        <!-- Stele și text review -->
+        <div class="star-rating" id="star-rating"></div>
+        <textarea placeholder="Your review..."></textarea>
 
-<!-- Review Popup Modal -->
-<div id="review-popup" class="hidden review-popup">
-  <div class="popup-content">
-  <span class="close" onclick="closeReviewPopup()">&times;</span>
-
-    <h3>Leave a Review</h3>
-
-    <label for="review-city">Select City:</label>
-    <select id="review-city">
-     <option value="">-- Choose a city --</option>
-<option value="adana">Adana</option>
-<option value="ankara">Ankara</option>
-<option value="antalya">Antalya</option>
-<option value="bursa">Bursa</option>
-<option value="cappadocia">Cappadocia</option>
-<option value="gaziantep">Gaziantep</option>
-<option value="istanbul">Istanbul</option>
-<option value="izmir">Izmir</option>
-<option value="kayseri">Kayseri</option>
-<option value="konya">Konya</option>
-<option value="mardin">Mardin</option>
-<option value="pamukkale">Pamukkale</option>
-<option value="sanliurfa">Sanliurfa</option>
-<option value="trabzon">Trabzon</option>
-</select>
-
-    <div class="star-rating" id="star-rating"></div>
-    <textarea placeholder="Your review..."></textarea>
- <button class="submit-button" onclick="submitReviewPopup()">Submit</button>
-
-  </div>
-</div>
-		</section>
+        <!-- Buton de trimitere recenzie -->
+        <button class="submit-button" onclick="submitReviewPopup()">Submit</button>
+      </div>
+    </div>
+  </section>
 </section>
-		
-
 
 
 
@@ -818,341 +754,313 @@
 		<!--/subscription-->	
 		<!--subscription end -->
 
-		<!--footer start-->
-		<footer id="footer"  class="footer">
-			<div class="container">
-				<div class="footer-menu">
-		           	<div class="row">
-			           	<div class="col-sm-3">
-			           		 <div class="navbar-header">
-				                <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
-				            </div><!--/.navbar-header-->
-			           	</div>
-			           	<div class="col-sm-9">
-			           		<ul class="footer-menu-item">
-			                    <li class="scroll"><a href="#works">how it works</a></li>
-			                    <li class="scroll"><a href="#explore">explore</a></li>
-			                    <li class="scroll"><a href="#reviews">review</a></li>
-			                    <li class="scroll"><a href="#blog">blog</a></li>
-			                    <li class="scroll"><a href="#login">login</a></li>
-			                    <li class="scroll"><a href="#login">my account</a></li>
-			                </ul><!--/.nav -->
-			           	</div>
-		           </div>
-				</div>
-				<div class="hm-footer-copyright">
-					<div class="row">
-						<div class="col-sm-5">
-							<p>
-								&copy;copyright. designed and developed by Alice, Ioana & Andreea.
-							</p><!--/p-->
-						</div>
-						<div class="col-sm-7">
-  <div class="footer-social">
+<!-- FOOTER SECTION -->
+<footer id="footer" class="footer">
+  <div class="container">
 
-<span class="phone">
-  <a href="tel:+12227778888">
-    <i class="fa fa-phone"></i> +1 (222) 777 8888
-  </a>
-</span>
+    <!-- Branding și linkuri rapide -->
+    <div class="footer-menu">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">explore<span>turkey</span></a>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <ul class="footer-menu-item">
+            <li class="scroll"><a href="#works">how it works</a></li>
+            <li class="scroll"><a href="#explore">explore</a></li>
+            <li class="scroll"><a href="#reviews">review</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#login">login</a></li>
+            <li class="scroll"><a href="#login">my account</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <!-- Copyright și rețele sociale -->
+    <div class="hm-footer-copyright">
+      <div class="row">
+        <div class="col-sm-5">
+          <p>&copy;copyright. designed and developed by Alice, Ioana & Andreea.</p>
+        </div>
+        <div class="col-sm-7">
+          <div class="footer-social">
+            <span class="phone">
+              <a href="tel:+12227778888">
+                <i class="fa fa-phone"></i> +1 (222) 777 8888
+              </a>
+            </span>
 
+            <span style="font-size: 14px; color: #aaa; margin-right: 10px;">Share on:</span>
 
-	 <span style="font-size: 14px; color: #aaa; margin-right: 10px;">Share on:</span>
-
-   <a href="https://www.facebook.com/sharer/sharer.php?u=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
-  <i class="fa fa-facebook"></i>
-</a>
-
-<a href="https://twitter.com/intent/tweet?url=https://atestatinformatica.github.io/ExploreTurkey/&text=Vezi%20aceasta%20pagina!" target="_blank">
-  <i class="fa fa-twitter"></i>
-</a>
-
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
-  <i class="fa fa-linkedin"></i>
-</a>
-
-<a href="https://api.whatsapp.com/send?text=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
-  <i class="fa fa-whatsapp"></i>
-</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://atestatinformatica.github.io/ExploreTurkey/&text=Vezi%20aceasta%20pagina!" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=https://atestatinformatica.github.io/ExploreTurkey/" target="_blank">
+              <i class="fa fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
-</div>
 
-					</div>
-					
-				</div><!--/.hm-footer-copyright-->
-			</div><!--/.container-->
+  <!-- Buton scroll-to-top -->
+  <div id="scroll-Top">
+    <div class="return-to-top">
+      <i class="fa fa-angle-up" id="scroll-top" data-toggle="tooltip" data-placement="top" title="Back to Top" aria-hidden="true"></i>
+    </div>
+  </div>
+</footer>
 
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-->
-		<!--footer end-->
-		<!-- Message box -->
-     <div id="message-box" class="message-box hidden"></div>
-<!-- Slide simplu pentru My Favorites -->
+<!-- Mesaj informativ / notificare -->
+<div id="message-box" class="message-box hidden"></div>
+
+<!-- Panel slide pentru My Favorites -->
 <div id="favorites-panel" class="favorites-slide">
   <span class="close-favorites" onclick="toggleFavoritesPanel()">x</span>
   <h3 class="favorites-title">My Favorites</h3>
   <div class="favorites-list">
-    <!-- aici intră locațiile favorite -->
+    <!-- Aici se vor insera locațiile favorite ale utilizatorului -->
   </div>
 </div>
-<!-- User Account Sidebar -->
+
+<!-- Panel slide pentru User Account / Profil -->
 <div id="user-profile-panel" class="favorites-slide">
-    <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
-<div class="user-info">
+  <span class="close-favorites" onclick="toggleUserProfilePanel()">x</span>
+  <div class="user-info">
     <h3 class="favorites-title">Contul Meu</h3>
     <p><strong>Username:</strong> <span id="profile-username"></span></p>
     <p><strong>Email:</strong> <span id="profile-email"></span></p>
-    <p><strong>Parola:</strong> <span id="profile-password"></span> 
-        <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
+    <p>
+      <strong>Parola:</strong> 
+      <span id="profile-password"></span> 
+      <i id="toggle-password-visibility" class="fa fa-eye" style="cursor:pointer; margin-left:8px;"></i>
     </p>
 
+    <!-- Secțiune pentru selectarea imaginii de profil -->
     <div class="profile-picture-section">
-        <p><strong>Profile picture:</strong></p>
-        <img id="current-profile-image" src="assets/images/users/user.png" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;" alt="Profile">
-        <div id="profile-options">
-            <p>Choose another photo:</p>
-            <div class="profile-options-container">
-                <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
-				<img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
-                <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
-            </div>
+      <p><strong>Profile picture:</strong></p>
+      <img id="current-profile-image" src="assets/images/users/user.png" 
+           alt="Profile" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 10px;">
+      <div id="profile-options">
+        <p>Choose another photo:</p>
+        <div class="profile-options-container">
+          <!-- Miniaturi pentru alegerea imaginii de profil -->
+          <img src="assets/images/clients/c1.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c2.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c3.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c4.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c5.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c6.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c7.png" onclick="selectProfileImage(this.src)">
+          <img src="assets/images/clients/c8.png" onclick="selectProfileImage(this.src)">
         </div>
+      </div>
     </div>
-	<button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
 
+    <!-- Buton logout -->
+    <button onclick="logout()" class="clear-favorites-btn" style="margin-top: 20px;">Logout</button>
+  </div>
 </div>
 
-
-
-<!-- Modal pentru hartă -->
-<div id="mapModal" class="popup" style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
-    <span class="close" onclick="closeMap()" style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
-    <iframe id="mapIframe" src="" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- Modal pentru afișarea hărții -->
+<div id="mapModal" class="popup" 
+     style="display: none; position: fixed; z-index: 10000; top: 50%; left: 50%; 
+            transform: translate(-50%, -50%); width: 90%; max-width: 600px; height: 400px; 
+            background: white; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+  <span class="close" onclick="closeMap()" 
+        style="position:absolute; top:10px; right:20px; font-size:28px; cursor:pointer;">&times;</span>
+  <iframe id="mapIframe" src="" width="100%" height="100%" 
+          style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
+<!-- Script pentru ascunderea/afișarea headerului la scroll -->
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector('.header-area');
 
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-  <script>
-let lastScrollTop = 0;
-const header = document.querySelector('.header-area');
-
-window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function () {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop && currentScroll > 100) {
-        // scroll în jos → ascunde
-        header.classList.add('hide');
+      // Scroll în jos → ascunde headerul
+      header.classList.add('hide');
     } else {
-        // scroll în sus → arată
-        header.classList.remove('hide');
+      // Scroll în sus → arată headerul
+      header.classList.remove('hide');
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+  });
 </script>
 
+<!-- Biblioteci și plugin-uri JS externe -->
+<script src="assets/js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<script src="assets/js/feather.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
+<!-- Scripturi custom -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/locations.js"></script>
+<script src="assets/js/favorites.js"></script>
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-
-        <!--feather.min.js-->
-        <script  src="assets/js/feather.min.js"></script>
-
-        <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-
-        <!--slick.min.js-->
-        <script src="assets/js/slick.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		     
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-	<script src="assets/js/locations.js"></script>
-        <script src="assets/js/favorites.js"></script>
-
-
-		<script>
-    /*const citiesInTurkey = [
-        "istanbul", "ankara", "izmir", "antalya", "bursa",
-        "adana", "gaziantep", "konya", "trabzon", "kayseri",
-        "mardin", "sanliurfa", "cappadocia", "pamukkale"
-    ];*/
-
- function searchCity(event) {
+<!-- Funcție pentru căutarea orașului și navigare -->
+<script>
+  function searchCity(event) {
     event.preventDefault();
     const input = document.getElementById("location-input").value.trim().toLowerCase();
 
     const citiesMap = {
-        "istanbul": "istanbul.html",
-        "ankara": "ankara.html",
-        "izmir": "izmir.html",
-        "antalya": "antalya.html",
-        "bursa": "bursa.html",
-        "adana": "adana.html",
-        "gaziantep": "gaziantep.html",
-        "konya": "konya.html",
-        "trabzon": "trabzon.html",
-        "kayseri": "kayseri.html",
-        "mardin": "mardin.html",
-        "sanliurfa": "sanliurfa.html",
-        "cappadocia": "cappadocia.html",
-        "pamukkale": "pamukkale.html"
+      "istanbul": "istanbul.html",
+      "ankara": "ankara.html",
+      "izmir": "izmir.html",
+      "antalya": "antalya.html",
+      "bursa": "bursa.html",
+      "adana": "adana.html",
+      "gaziantep": "gaziantep.html",
+      "konya": "konya.html",
+      "trabzon": "trabzon.html",
+      "kayseri": "kayseri.html",
+      "mardin": "mardin.html",
+      "sanliurfa": "sanliurfa.html",
+      "cappadocia": "cappadocia.html",
+      "pamukkale": "pamukkale.html"
     };
 
     if (citiesMap[input]) {
-        window.location.href = citiesMap[input];
+      window.location.href = citiesMap[input];
     } else {
-        alert("The city is not on our list in Turkey. Try another one!");
+      alert("The city is not on our list in Turkey. Try another one!");
     }
-}
-
-
+  }
 </script>
-<!-- Pop-up pentru text (How It Works) -->
+
+<!-- Popup text pentru secțiunea 'How It Works' -->
 <div id="popuptext" class="popuptext" style="display: none;">
-    <span class="close" onclick="closePopupText()">&times;</span>
-    <div class="popuptext-content">
-        <p id="popuptext-content-text"></p>
-    </div>
+  <span class="close" onclick="closePopupText()">&times;</span>
+  <div class="popuptext-content">
+    <p id="popuptext-content-text"></p>
+  </div>
 </div>
 
-
-
- <script>
-function openPopupText(text) {
+<script>
+  function openPopupText(text) {
     document.getElementById("popuptext-content-text").innerText = text;
     document.getElementById("popuptext").style.display = "flex";
-}
+  }
 
-function closePopupText() {
+  function closePopupText() {
     document.getElementById("popuptext").style.display = "none";
-}
+  }
 </script>
 
-
+<!-- Funcții pentru afișarea și închiderea hărții -->
 <script>
-function openMap(location) {
+  function openMap(location) {
     const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
     document.getElementById('mapIframe').src = mapUrl;
     document.getElementById('mapModal').style.display = 'block';
-}
+  }
 
-function closeMap() {
+  function closeMap() {
     document.getElementById('mapModal').style.display = 'none';
-    document.getElementById('mapIframe').src = ''; // reset la închidere
-}
+    document.getElementById('mapIframe').src = ''; // Reset iframe la închidere
+  }
 </script>
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/slick.min.js"></script>
+<!-- Scripturi pentru gestionarea recenziilor -->
 <script src="assets/js/reviews.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    renderAllReviews();
+    renderAllReviews(); // Încarcă toate recenziile la încărcarea paginii
   });
-</script>
-<script>
-let reviewsVisible = false;
 
-function toggleReviews() {
-  reviewsVisible = !reviewsVisible;
-  applyReviewHidingLogic();
-   if (!reviewsVisible) {
-    // Scroll la secțiunea "reviews"
-    document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+  let reviewsVisible = false;
+
+  // Funcție toggle pentru afișarea/ascunderea recenziilor
+  function toggleReviews() {
+    reviewsVisible = !reviewsVisible;
+    applyReviewHidingLogic();
+
+    if (!reviewsVisible) {
+      // Scroll către secțiunea recenzii
+      document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth" });
+    }
   }
-}
-function renderAllReviews() {
-  const container = document.getElementById("all-reviews-container");
-  if (!container) return;
 
-  container.querySelectorAll(".user-review").forEach(el => el.remove());
+  // Funcție pentru afișarea tuturor recenziilor
+  function renderAllReviews() {
+    const container = document.getElementById("all-reviews-container");
+    if (!container) return;
 
-  const cities = [
-    "istanbul", "ankara", "izmir", "antalya", "bursa", "adana", "gaziantep", 
-    "konya", "trabzon", "kayseri", "mardin", "sanliurfa", "cappadocia", "pamukkale"
-  ];
+    // Șterge recenziile existente
+    container.querySelectorAll(".user-review").forEach(el => el.remove());
 
-  const userReviews = [];
-  const otherReviews = [];
+    const cities = [
+      "istanbul", "ankara", "izmir", "antalya", "bursa", "adana", "gaziantep", 
+      "konya", "trabzon", "kayseri", "mardin", "sanliurfa", "cappadocia", "pamukkale"
+    ];
 
-  cities.forEach(city => {
-    const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
-    reviews.forEach(r => {
-      const stars = "★".repeat(r.rating);
-      const canDelete = (r.email === currentUserEmail);
+    const userReviews = [];
+    const otherReviews = [];
 
-      const reviewHTML = `
-        <div class="review-card user-review" data-email="${r.email}">
-          <div class="review-header">
-            <img src="${r.photo}" alt="${r.username}">
-            <div class="review-info">
-              <h3>${r.username}</h3>
-              <p class="review-location">${city.charAt(0).toUpperCase() + city.slice(1)}</p>
+    cities.forEach(city => {
+      const reviews = JSON.parse(localStorage.getItem(`reviews_${city}`)) || [];
+      reviews.forEach(r => {
+        const stars = "★".repeat(r.rating);
+        const canDelete = (r.email === currentUserEmail);
+
+        const reviewHTML = `
+          <div class="review-card user-review" data-email="${r.email}">
+            <div class="review-header">
+              <img src="${r.photo}" alt="${r.username}">
+              <div class="review-info">
+                <h3>${r.username}</h3>
+                <p class="review-location">${city.charAt(0).toUpperCase() + city.slice(1)}</p>
+              </div>
+              <div class="review-rating">${stars}</div>
             </div>
-            <div class="review-rating">${stars}</div>
+            <p class="review-text">"${r.text}"</p>
+            ${canDelete ? `<button onclick="deleteReview('${city}')" class="review-delete-btn">Delete</button>` : ""}
           </div>
-          <p class="review-text">"${r.text}"</p>
-          ${canDelete ? `<button onclick="deleteReview('${city}')" class="review-delete-btn">Delete</button>` : ""}
-        </div>
-      `;
+        `;
 
-      if (r.email === currentUserEmail) {
-        userReviews.unshift(reviewHTML); // Îl punem primul
-      } else {
-        otherReviews.push(reviewHTML);
-      }
+        if (r.email === currentUserEmail) {
+          userReviews.unshift(reviewHTML); // Recenziile proprii primele
+        } else {
+          otherReviews.push(reviewHTML);
+        }
+      });
     });
-  });
 
-  // Întâi recenziile proprii (inversează ordinea dacă ai adăugat cu .unshift)
-  userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+    // Afișează întâi recenziile utilizatorului, apoi restul
+    userReviews.forEach(html => container.insertAdjacentHTML("afterbegin", html));
+    otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
 
-  // Apoi restul
-  otherReviews.forEach(html => container.insertAdjacentHTML("beforeend", html));
-
-  // Aplică ascunderea
-applyReviewHidingLogic();
-
-}
-
-
+    // Aplică logica de ascundere/afișare recenzii
+    applyReviewHidingLogic();
+  }
 </script>
 
-
-    </body>
-	
+</body>
 </html>
-<!-- Slick CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Slick Theme CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Slick JS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!-- reviews.js -->
+
+
